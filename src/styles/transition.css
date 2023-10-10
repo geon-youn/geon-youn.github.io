@@ -1,6 +1,10 @@
 :root {
-  --size: 25vh;
+  --size: min(25vh, 25vw);
   --half: calc(var(--size) / 2);
+}
+
+.transition {
+  position: absolute;
 }
 
 .blur {
@@ -38,12 +42,16 @@ img {
     transform: rotate(0);
   }
   75% {
+    top: calc(50vh - var(--half));
     left: calc(50vw - var(--half));
     transform: rotate(720deg);
+    width: var(--size);
     opacity: 1;
   }
   to {
-    left: calc(50vw - var(--half));
+    top: calc(50vh - var(--size));
+    left: calc(50vw - var(--size));
+    width: calc(2 * var(--size));
     transform: rotate(720deg);
     opacity: 0;
   }
