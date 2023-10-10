@@ -3,6 +3,14 @@
   --half: calc(var(--size) / 2);
 }
 
+.blur {
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(2px);
+  background-color: rgba(0, 0, 0, 0.8);
+  animation: forwards fade 2s;
+}
+
 img {
   position: absolute;
   animation-name: rollIn;
@@ -12,24 +20,31 @@ img {
   top: calc(50vh - var(--half));
 }
 
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 @keyframes rollIn {
   from {
-    left: calc(-2 * var(--size));
+    left: calc(-3 * var(--size));
     transform: rotate(0);
-    opacity: 0.5;
   }
   75% {
     left: calc(50vw - var(--half));
     transform: rotate(720deg);
-    width: var(--size);
     opacity: 1;
-    top: calc(50vh - var(--half));
   }
   to {
-    left: calc(100vw - var(--size));
-    top: calc(0vh - var(--half));
-    transform: rotate(1080deg);
-    width: calc(var(--size) * 0.5);
+    left: calc(50vw - var(--half));
+    transform: rotate(720deg);
     opacity: 0;
   }
 }

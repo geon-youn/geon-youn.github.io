@@ -1,22 +1,13 @@
 import '../styles/transition.css';
-import { useEffect, useState } from 'react';
 
-function Transition() {
-  const [hidden, setHidden] = useState(false);
-
-  useEffect(() => {
-    const key = setTimeout(() => {
-      setHidden(true);
-    }, 3000);
-    return () => {
-      clearTimeout(key);
-    };
-  }, []);
-
+function Transition({ hidden }) {
   return hidden ? (
     <></>
   ) : (
-    <img src="../../public/icon.png" alt="Geon osu! logo" />
+    <>
+      <div className="blur"></div>
+      <img src="../../public/icon.png" alt="Geon osu! logo" />
+    </>
   );
 }
 
