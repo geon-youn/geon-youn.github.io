@@ -7,13 +7,18 @@ function Page({ children }) {
   useEffect(() => {
     const key = setTimeout(() => {
       setHidden(true);
-    }, 3000);
+    }, 2500);
     return () => {
       clearTimeout(key);
     };
   }, []);
 
-  return <>{hidden ? children : <Transition hidden={hidden} />}</>;
+  return (
+    <>
+      {hidden ? null : <Transition hidden={hidden} />}
+      {children}
+    </>
+  );
 }
 
 export default Page;
