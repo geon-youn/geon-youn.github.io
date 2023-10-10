@@ -1,0 +1,35 @@
+:root {
+  --size: 25vh;
+  --half: calc(var(--size) / 2);
+}
+
+img {
+  position: absolute;
+  animation-name: rollIn;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  width: var(--size);
+  top: calc(50vh - var(--half));
+}
+
+@keyframes rollIn {
+  from {
+    left: calc(-2 * var(--size));
+    transform: rotate(0);
+    opacity: 0.5;
+  }
+  75% {
+    left: calc(50vw - var(--half));
+    transform: rotate(720deg);
+    width: var(--size);
+    opacity: 1;
+    top: calc(50vh - var(--half));
+  }
+  to {
+    left: calc(100vw - var(--size));
+    top: calc(0vh - var(--half));
+    transform: rotate(1080deg);
+    width: calc(var(--size) * 0.5);
+    opacity: 0;
+  }
+}
