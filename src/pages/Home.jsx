@@ -11,11 +11,14 @@
 
 import Page from './Page';
 import Cookie from '../components/Cookie';
+import styles from '../styles/home.module.css';
 
 function Home() {
   return (
     <Page>
-      <Cookie></Cookie>
+      <div className={styles.home}>
+        <Cookie></Cookie>
+      </div>
     </Page>
   );
 }
