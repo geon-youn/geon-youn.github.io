@@ -6,7 +6,7 @@ function Transition({ hidden }) {
   ) : (
     <div className="transition">
       <div className="blur"></div>
-      <img src="../../public/icon.png" alt="Geon osu! logo" />
+      <img src="/icon.png" alt="Geon osu! logo" />
     </div>
   );
 }
