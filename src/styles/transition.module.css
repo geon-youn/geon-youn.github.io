@@ -1,6 +1,9 @@
 :root {
   --size: min(25vh, 25vw);
   --half: calc(var(--size) / 2);
+  --duration: 1.5s;
+  --end-size: calc(var(--size) * 2);
+  --end-half: calc(var(--end-size) / 2);
 }
 
 .transition {
@@ -10,15 +13,15 @@
 .blur {
   width: 100vw;
   height: 100vh;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(min(5vw, 5vh));
   background-color: rgba(0, 0, 0, 0.8);
-  animation: forwards fade 2s;
+  animation: forwards fade var(--duration);
 }
 
 .transitionImg {
   position: absolute;
   animation-name: rollIn;
-  animation-duration: 2s;
+  animation-duration: var(--duration);
   animation-fill-mode: forwards;
   width: var(--size);
   top: calc(50vh - var(--half));
@@ -49,9 +52,9 @@
     opacity: 1;
   }
   to {
-    top: calc(50vh - var(--size));
-    left: calc(50vw - var(--size));
-    width: calc(2 * var(--size));
+    top: calc(50vh - var(--end-half));
+    left: calc(50vw - var(--end-half));
+    width: var(--end-size);
     transform: rotate(720deg);
     opacity: 0;
   }

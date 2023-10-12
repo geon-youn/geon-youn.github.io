@@ -7,7 +7,7 @@ function Page({ children }) {
   useEffect(() => {
     const key = setTimeout(() => {
       setHidden(true);
-    }, 2500);
+    }, 1500);
     return () => {
       clearTimeout(key);
     };
