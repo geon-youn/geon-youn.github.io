@@ -1,12 +1,12 @@
-import '../styles/transition.css';
+import styles from '../styles/transition.module.css';
 
 function Transition({ hidden }) {
   return hidden ? (
     <></>
   ) : (
-    <div className="transition">
-      <div className="blur"></div>
-      <img src="/icon.png" alt="Geon osu! logo" />
+    <div className={styles.transition}>
+      <div className={styles.blur}></div>
+      <img className={styles.transitionImg} src="/icon.png" alt="Geon osu! logo" />
     </div>
   );
 }

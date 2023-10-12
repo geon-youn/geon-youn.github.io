@@ -15,7 +15,7 @@
   animation: forwards fade 2s;
 }
 
-img {
+.transitionImg {
   position: absolute;
   animation-name: rollIn;
   animation-duration: 2s;
