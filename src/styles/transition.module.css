@@ -9,6 +9,7 @@
 .transition {
   position: absolute;
   z-index: 1000;
+  user-select: none;
 }
 
 .blur {
