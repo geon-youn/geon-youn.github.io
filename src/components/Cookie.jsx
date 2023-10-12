@@ -38,25 +38,35 @@ function Cookie() {
     setExpand(!expand);
   }
 
+  function expandClasses(original) {
+    return `${styles[original]}${
+      expand ? '' : ' ' + styles[`${original}Hidden`]
+    }`;
+  }
+
   return (
     <div className={styles.cookie}>
-      <img
-        className={styles.cookieImg}
-        src="/img/icon.png"
-        alt="Geon osu! logo"
-        onClick={handleClick}
-      />
-      <div
-        className={`${styles.cookieLinks}${
-          expand ? '' : ' ' + styles.cookieLinksHidden
-        }`}
-      >
+      <div className={styles.parentCookieImg} onClick={handleClick}>
+        <img
+          className={styles.cookieImg}
+          src="/img/icon.png"
+          alt="Geon osu! logo"
+        />
+        <img
+          className={styles.ghostCookieImg}
+          src="/img/icon.png"
+          alt="Ghost of Geon osu! logo 1"
+        />
+      </div>
+      <div className={expandClasses('cookieLinks')}>
         <div className={styles.clip}>
           {links.map((i) => {
             return (
               <a key={i.href} href={i.href} className={styles.cookieLink}>
-                <div className={styles.cookieLinkText}>{i.text}</div>
-                <div className={styles.cookieLinkIcon}>
+                <div className={styles.cookieLinkText} hidden={!expand}>
+                  {i.text}
+                </div>
+                <div className={styles.cookieLinkIcon} hidden={!expand}>
                   <Icon path={i.path} size={`min(5vw, 5vh)`} />
                 </div>
               </a>
