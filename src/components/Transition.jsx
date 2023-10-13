@@ -1,3 +1,9 @@
+/**
+ * --- Transition ---
+ * 
+ * Pops up at the start of each new route.
+ */
+
 import styles from '../styles/transition.module.css';
 
 function Transition({ hidden }) {

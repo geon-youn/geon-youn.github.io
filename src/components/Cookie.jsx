@@ -5,7 +5,10 @@
  * - About
  * - Projects
  * - Contact
- * - GitHub
+ * - Resume*
+ * - GitHub*
+ * 
+ * *External links to another site.
  */
 
 import { useState } from 'react';
