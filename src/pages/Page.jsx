@@ -3,6 +3,7 @@ import styles from '../styles/page.module.css';
 import { useEffect, useState } from 'react';
 
 function Page({ children, showBack }) {
+  // hide transition after a few seconds
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
@@ -16,8 +17,13 @@ function Page({ children, showBack }) {
 
   return (
     <>
+      {/* transition */}
       {hidden ? null : <Transition hidden={hidden} />}
+
+      {/* main content */}
       {children}
+
+      {/* back button */}
       {showBack ? (
         <a className={styles.back} href="/">
           <div id={styles.back1}>B</div>
