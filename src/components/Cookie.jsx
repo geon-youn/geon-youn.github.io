@@ -14,6 +14,7 @@ import {
   mdiClipboardAccountOutline,
   mdiClipboardTextMultipleOutline,
   mdiAccountGroupOutline,
+  mdiFileAccount
 } from '@mdi/js';
 import styles from '../styles/cookie.module.css';
 
@@ -28,6 +29,7 @@ const links = [
     path: mdiClipboardTextMultipleOutline,
   },
   { href: '/#/contact', text: 'Contact', path: mdiAccountGroupOutline },
+  { href: '/', text: 'Resume', path: mdiFileAccount },
   { href: 'https://github.com/geon-youn', text: 'GitHub', path: gitHub },
 ];
 
