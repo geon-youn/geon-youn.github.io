@@ -1,0 +1,45 @@
+.back {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 15vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 5vh;
+  color: white;
+  font-weight: bold;
+  font-style: italic;
+  text-shadow: 0 0.1vh 0.1vh rgba(0, 0, 0, 0.445);
+  box-shadow: 0 0 0.2vh rgba(0, 0, 0, 0.445);
+  background-color: rgba(0, 0, 0, 0.11);
+  user-select: none;
+}
+
+.back > div {
+  animation: backAnimation 1s infinite alternate;
+}
+
+#back1 {
+}
+
+#back2 {
+  animation-delay: 0.25s;
+}
+#back3 {
+  animation-delay: 0.5s;
+}
+#back4 {
+  animation-delay: 0.75s;
+}
+
+@keyframes backAnimation {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-0.5vh);
+  }
+}

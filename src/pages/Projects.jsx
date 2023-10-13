@@ -8,7 +8,7 @@
 import Page from './Page';
 
 function Projects() {
-  return <Page></Page>;
+  return <Page showBack={true}></Page>;
 }
 
 export default Projects;

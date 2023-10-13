@@ -17,7 +17,7 @@
 import Page from './Page';
 
 function About() {
-  return <Page></Page>;
+  return <Page showBack={true}></Page>;
 }
 
 export default About;
