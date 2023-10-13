@@ -1,7 +1,10 @@
 .home {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
   width: 100vw;
   height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/hott_four_canal.jpg');
+  background-size: cover;
+  background-position: 42% 0%;
 }
