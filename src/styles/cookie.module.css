@@ -11,6 +11,7 @@
   top: 0;
   left: 0;
   border-radius: 50%;
+  transition: 0.2s;
 }
 
 .cookieImg {
@@ -18,7 +19,7 @@
   top: 0;
   left: 0;
   width: min(50vw, 50vh);
-  transition: 0.2s;
+  transition: 0.5s;
   z-index: 2;
   border-radius: 50%;
   animation: pulse 0.5s infinite;
@@ -29,16 +30,10 @@
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.2;
   border-radius: 50%;
   animation: ghostPulse 0.5s infinite;
   z-index: 3;
   pointer-events: none;
-}
-
-.cookieImg:hover {
-  transform: scale(1.04);
-  transition: 0.2s;
 }
 
 .cookieLinks {
@@ -56,7 +51,7 @@
   width: 0;
   opacity: 0;
   transform: scaleX(0);
-  transform-origin: center left;
+  transform-origin: -100%;
   transition: 0.5s;
 }
 
@@ -65,7 +60,7 @@
   display: flex;
   flex-direction: column;
   gap: min(1.5vw, 1.5vh);
-  clip-path: circle(100% at min(22vw, 22vh));
+  clip-path: circle(100% at 35% 50%);
 }
 
 .cookieLink {
@@ -75,15 +70,19 @@
   box-sizing: border-box;
   width: calc(100% + min(13vw, 13vh));
   height: min(6.5vw, 6.5vh);
-  background-image: linear-gradient(to right, #f59f73, #e99367, #de885b);
+  background-color: #f59e73cc;
+  /* background-image: linear-gradient(to right, #f59e73cc, #e99367cc, #de885bcc); */
+  background-image: linear-gradient(to right, #00000028, #00000062, #00000093);
   text-decoration: none;
   transition: 0.2s;
   border-radius: min(1vw, 1vh);
 }
 
-.cookieLink:hover {
+.cookieLink:hover,
+.cookieLink:focus {
   transition: 0.2s;
-  transform: scale(1.01);
+  transform: scale(1.05);
+  background-image: linear-gradient(to right, #f59e73, #e99367, #de885b);
 }
 
 .cookieLinkText {
@@ -93,6 +92,11 @@
   font-weight: bold;
   font-style: italic;
   text-shadow: 0 min(0.2vw, 0.2vh) min(0.3vw, 0.3vh) rgba(0, 0, 0, 0.445);
+}
+
+.cookieLinkTextHidden,
+.cookieLinkIconHidden {
+  opacity: 0;
 }
 
 .cookieLinkIcon {
@@ -118,8 +122,10 @@
 @keyframes ghostPulse {
   from {
     transform: scale(1);
+    opacity: 0.5;
   }
   to {
     transform: scale(1.04);
+    opacity: 0.2;
   }
 }

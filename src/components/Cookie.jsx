@@ -78,11 +78,11 @@ function Cookie() {
             return (
               <a key={i.href} href={i.href} className={styles.cookieLink}>
                 {/* link text */}
-                <div className={styles.cookieLinkText} hidden={!expand}>
+                <div className={expandClasses('cookieLinkText')}>
                   {i.text}
                 </div>
                 {/* link svg */}
-                <div className={styles.cookieLinkIcon} hidden={!expand}>
+                <div className={expandClasses('cookieLinkIcon')}>
                   <Icon path={i.path} size={`min(5vw, 5vh)`} />
                 </div>
               </a>
