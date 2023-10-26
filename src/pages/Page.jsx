@@ -1,14 +1,15 @@
 import Transition from '../components/Transition';
+import Header from '../components/Header';
 import styles from '../styles/page.module.css';
 import { useEffect, useState } from 'react';
 
-function Page({ children, showBack }) {
+function Page({ children, home = false, currentLink }) {
   // hide transition after a few seconds
-  const [hidden, setHidden] = useState(false);
+  const [showTransition, setShowTransition] = useState(false);
 
   useEffect(() => {
     const key = setTimeout(() => {
-      setHidden(true);
+      setShowTransition(true);
     }, 1500);
     return () => {
       clearTimeout(key);
@@ -18,20 +19,13 @@ function Page({ children, showBack }) {
   return (
     <>
       {/* transition */}
-      {hidden ? null : <Transition hidden={hidden} />}
+      {home ? showTransition ? null : <Transition /> : null}
+
+      {/* header */}
+      {home ? null : <Header currentLink={currentLink}></Header>}
 
       {/* main content */}
       {children}
-
-      {/* back button */}
-      {showBack ? (
-        <a className={styles.back} href="/">
-          <div id={styles.back1}>B</div>
-          <div id={styles.back2}>a</div>
-          <div id={styles.back3}>c</div>
-          <div id={styles.back4}>k</div>
-        </a>
-      ) : null}
     </>
   );
 }

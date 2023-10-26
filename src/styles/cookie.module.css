@@ -71,7 +71,6 @@
   width: calc(100% + min(13vw, 13vh));
   height: min(6.5vw, 6.5vh);
   background-color: #f59e73cc;
-  /* background-image: linear-gradient(to right, #f59e73cc, #e99367cc, #de885bcc); */
   background-image: linear-gradient(to right, #00000028, #00000062, #00000093);
   text-decoration: none;
   transition: 0.2s;

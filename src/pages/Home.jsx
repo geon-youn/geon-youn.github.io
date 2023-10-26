@@ -15,7 +15,7 @@ import styles from '../styles/home.module.css';
 
 function Home() {
   return (
-    <Page>
+    <Page home={true}>
       <div className={styles.home}>
         <Cookie></Cookie>
       </div>

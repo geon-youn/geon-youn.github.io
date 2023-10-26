@@ -8,7 +8,7 @@
 import Page from './Page';
 
 function Projects() {
-  return <Page showBack={true}></Page>;
+  return <Page currentLink={'Projects'}></Page>;
 }
 
 export default Projects;
