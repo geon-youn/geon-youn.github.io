@@ -1,18 +1,20 @@
 /**
  * --- Transition ---
- * 
+ *
  * Pops up at the start of each new route.
  */
 
 import styles from '../styles/transition.module.css';
 
-function Transition({ hidden }) {
-  return hidden ? (
-    <></>
-  ) : (
+function Transition() {
+  return (
     <div className={styles.transition}>
       <div className={styles.blur}></div>
-      <img className={styles.transitionImg} src="/img/icon.png" alt="Geon osu! logo" />
+      <img
+        className={styles.transitionImg}
+        src="/img/icon.png"
+        alt="Geon osu! logo"
+      />
     </div>
   );
 }
