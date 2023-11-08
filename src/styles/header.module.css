@@ -58,7 +58,7 @@
   /* transform: scaleY(0); */
   position: absolute;
   top: 0;
-  transform: translateX(calc(var(--headerSize) / 2));
+  transform: translateY(calc(var(--headerSize) / 2));
   transform-origin: bottom center;
   transition: 0.1s;
   opacity: 0;
