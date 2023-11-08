@@ -1,17 +1,17 @@
 import styles from '../styles/header.module.css';
-import { useEffect, useState } from 'react';
 import links from '../common/links';
+import { useState, useEffect } from 'react';
 
 const titles = [
   'McMaster Student',
-  'Computer Science Undergrad',
+  'Computer Science Undergraduate',
   'Varsity Rower',
   'Full Stack Developer',
   'osu! Player',
   'Lost Ark Player',
 ];
 
-function Header({ currentLink }) {
+function Header({ page }) {
   const [titleIdx, setTitleIdx] = useState(0);
 
   useEffect(() => {
@@ -26,7 +26,7 @@ function Header({ currentLink }) {
     return () => {
       clearInterval(key);
     };
-  }, []);
+  });
 
   return (
     <div className={styles.header}>
@@ -54,7 +54,13 @@ function Header({ currentLink }) {
       <div className={styles.links}>
         {links.map((link) => {
           return (
-            <a className={`${styles.link}${currentLink === link.text ? ' ' + styles.linkActive : ''}`} key={link.text} {...link.data}>
+            <a
+              className={`${styles.link}${
+                page === link.text ? ' ' + styles.linkActive : ''
+              }`}
+              key={link.text}
+              {...link.data}
+            >
               {link.text}
             </a>
           );
