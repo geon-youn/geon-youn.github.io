@@ -16,7 +16,6 @@
 
 import Page from './Page';
 import styles from '../styles/about.module.css';
-import { useState, useEffect } from 'react';
 
 function About() {
   return (
