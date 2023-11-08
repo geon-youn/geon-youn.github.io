@@ -31,7 +31,11 @@ const links = [
     path: mdiAccountGroupOutline,
   },
   {
-    data: { href: '/', target: '_blank', rel: 'noopener' },
+    data: {
+      href: 'https://github.com/geon-youn/resume/blob/de078834c00daca39a76bc05b2c8606f6acfef9d/Geon%20Youn%20-%20Full%20Stack%20Developer.pdf',
+      target: '_blank',
+      rel: 'noopener',
+    },
     text: 'Resume',
     path: mdiFileAccount,
   },
