@@ -12,7 +12,7 @@
 }
 
 .name {
-  display: flex; 
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -47,6 +47,7 @@
   justify-content: center;
   width: 100%;
   user-select: none;
+  clip-path: fill-box;
 }
 
 .title {
@@ -75,7 +76,7 @@
   border-top: min(0.5vw, 0.5vh) solid black;
 }
 
-.link { 
+.link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -87,7 +88,7 @@
 }
 
 .linkActive {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
 }
 
 .link:hover {
