@@ -20,7 +20,7 @@ import { useState, useEffect } from 'react';
 
 function About() {
   return (
-    <Page currentLink={'About'}>
+    <Page page={'About'}>
       <div className={styles.about}>
         {/* Bio */}
         <div className={styles.bio}>

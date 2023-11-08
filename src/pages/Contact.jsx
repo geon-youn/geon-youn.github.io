@@ -1,7 +1,7 @@
 import Page from './Page';
 
 function Contact() {
-  return <Page currentLink={'Contact'}></Page>;
+  return <Page page={'Contact'}></Page>;
 }
 
 export default Contact;

@@ -3,13 +3,13 @@ import Header from '../components/Header';
 import styles from '../styles/page.module.css';
 import { useEffect, useState } from 'react';
 
-function Page({ children, home = false, currentLink }) {
+function Page({ children, page = 'Home' }) {
   // hide transition after a few seconds
-  const [showTransition, setShowTransition] = useState(false);
+  const [showTransition, setShowTransition] = useState(true);
 
   useEffect(() => {
     const key = setTimeout(() => {
-      setShowTransition(true);
+      setShowTransition(false);
     }, 1500);
     return () => {
       clearTimeout(key);
@@ -19,10 +19,10 @@ function Page({ children, home = false, currentLink }) {
   return (
     <>
       {/* transition */}
-      {home ? showTransition ? null : <Transition /> : null}
+      {showTransition ? <Transition page={page} /> : null}
 
       {/* header */}
-      {home ? null : <Header currentLink={currentLink}></Header>}
+      {page === 'Home' ? null : <Header page={page}></Header>}
 
       {/* main content */}
       {children}

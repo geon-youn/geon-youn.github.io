@@ -22,13 +22,23 @@
   animation: forwards fade var(--duration);
 }
 
-.transitionImg {
+.homeTransition {
   position: absolute;
   animation-name: rollIn;
   animation-duration: var(--duration);
   animation-fill-mode: forwards;
   width: var(--size);
   top: calc(50vh - var(--half));
+}
+
+.contactTransition {
+  position: absolute;
+  animation-name: popUp;
+  animation-duration: var(--duration);
+  animation-fill-mode: forwards;
+  width: var(--size);
+  top: calc(50vh - var(--half));
+  left: calc(50vw - var(--half));
 }
 
 @keyframes fade {
@@ -61,5 +71,24 @@
     width: var(--end-size);
     transform: rotate(720deg);
     opacity: 0;
+  }
+}
+
+@keyframes popUp {
+  from {
+    top: 100vh;
+    transform: scale(0);
+  }
+  45% {
+    top: calc(50vh - var(--half));
+    transform: scale(1);
+  }
+  55% {
+    top: calc(50vh - var(--half));
+    transform: scale(1);
+  }
+  to {
+    top: 100vh;
+    transform: scale(0);
   }
 }
