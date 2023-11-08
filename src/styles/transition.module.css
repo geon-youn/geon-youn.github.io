@@ -23,7 +23,7 @@
 }
 
 .homeTransition {
-  position: absolute;
+  position: fixed;
   animation-name: rollIn;
   animation-duration: var(--duration);
   animation-fill-mode: forwards;
@@ -32,7 +32,7 @@
 }
 
 .contactTransition {
-  position: absolute;
+  position: fixed;
   animation-name: popUp;
   animation-duration: var(--duration);
   animation-fill-mode: forwards;
@@ -79,11 +79,11 @@
     top: 100vh;
     transform: scale(0);
   }
-  45% {
+  35% {
     top: calc(50vh - var(--half));
     transform: scale(1);
   }
-  75% {
+  65% {
     top: calc(50vh - var(--half));
     transform: scale(1);
   }
