@@ -12,11 +12,11 @@ const transitions = {
     src: '/img/icon.png',
     alt: 'Geon osu! logo',
   },
-  Contact: {
-    className: styles.contactTransition,
-    src: '/img/letsplay.png',
-    alt: "[Let'sPlay]",
-  },
+  // Contact: {
+  //   className: styles.contactTransition,
+  //   src: '/img/letsplay.png',
+  //   alt: "[Let'sPlay]",
+  // },
 };
 
 function Transition({ page }) {
