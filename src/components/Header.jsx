@@ -26,7 +26,7 @@ function Header({ page }) {
     return () => {
       clearInterval(key);
     };
-  });
+  }, []);
 
   return (
     <div className={styles.header}>
