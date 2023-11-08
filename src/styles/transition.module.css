@@ -83,7 +83,7 @@
     top: calc(50vh - var(--half));
     transform: scale(1);
   }
-  55% {
+  75% {
     top: calc(50vh - var(--half));
     transform: scale(1);
   }
