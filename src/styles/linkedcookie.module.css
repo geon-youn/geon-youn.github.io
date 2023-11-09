@@ -1,0 +1,72 @@
+.linkedCookie {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  user-select: none;
+}
+
+.cookieLinksContainer {
+  clip-path: polygon(max(-13vw, -13vh) 0, 100% 0, 100% 100%, max(-13vw, -13vh) 100%);
+  width: min(60vw, 60vh);
+  transition: 1s;
+}
+
+.cookieLinksContainerHidden {
+  width: 0;
+  transition: 1s;
+}
+
+.cookieLinks {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: max(-13vw, -13vh);
+  gap: min(1.5vw, 1.5vh);
+  clip-path: circle(100% at 42% 50%);
+  transition: 1s;
+  width: min(60vw, 60vh);
+}
+
+.cookieLinksHidden {
+  transform: translateX(-110%);
+  transition: 1s;
+}
+
+.cookieLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+  height: min(6.5vw, 6.5vh);
+  background-image: linear-gradient(to right, #00000028, #00000062, #00000093);
+  background-color: #f59e73cc;
+  text-decoration: none;
+  width: calc(100% + min(13vw, 13vh));
+  padding-left: min(10vw, 10vh);
+}
+
+.cookieLink:hover {
+  transform: scale(1.05);
+  background-image: linear-gradient(to right, #f59e73, #e99367, #de885b);
+}
+
+.cookieLinkText {
+  font-size: min(4vw, 4vh);
+  color: white;
+  font-weight: bold;
+  font-style: italic;
+  text-shadow: 0 min(0.2vw, 0.2vh) min(0.3vw, 0.3vh) rgba(0, 0, 0, 0.445);
+  transition: 0.2s;
+}
+
+.cookieLinkIcon {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(
+    0 min(0.2vw, 0.2vh) min(0.3vw, 0.3vh) rgba(0, 0, 0, 0.445)
+  );
+  transition: 0.2s;
+}

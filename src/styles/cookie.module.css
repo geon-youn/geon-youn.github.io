@@ -1,12 +1,4 @@
 .cookie {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  user-select: none;
-}
-
-.parentCookieImg {
   position: relative;
   top: 0;
   left: 0;
@@ -14,7 +6,7 @@
   transition: 0.5s;
 }
 
-.cookieImg {
+.cookieMain {
   position: relative;
   top: 0;
   left: 0;
@@ -25,7 +17,7 @@
   animation: pulse 0.5s infinite;
 }
 
-.ghostCookieImg {
+.cookieGhost {
   width: min(50vw, 50vh);
   position: absolute;
   top: 0;
@@ -34,79 +26,6 @@
   animation: ghostPulse 0.5s infinite;
   z-index: 3;
   pointer-events: none;
-}
-
-.cookieLinks {
-  filter: drop-shadow(
-    0 min(0.2vw, 0.2vh) min(0.3vw, 0.3vh) rgba(0, 0, 0, 0.445)
-  );
-  width: min(60vw, 60vh);
-  transition: 0.5s;
-  grid-column-start: 1;
-  position: relative;
-  left: max(-13vw, -13vh);
-}
-
-.cookieLinksHidden {
-  width: 0;
-  opacity: 0;
-  transform: scaleX(0);
-  transform-origin: 0%;
-  transition: 0.5s;
-}
-
-.clip {
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  gap: min(1.5vw, 1.5vh);
-  clip-path: circle(100% at 35% 50%);
-}
-
-.cookieLink {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-  width: calc(100% + min(13vw, 13vh));
-  height: min(6.5vw, 6.5vh);
-  background-color: #f59e73cc;
-  background-image: linear-gradient(to right, #00000028, #00000062, #00000093);
-  text-decoration: none;
-  transition: 0.2s;
-  border-radius: min(1vw, 1vh);
-}
-
-.cookieLink:hover,
-.cookieLink:focus {
-  transition: 0.2s;
-  transform: scale(1.05);
-  background-image: linear-gradient(to right, #f59e73, #e99367, #de885b);
-}
-
-.cookieLinkText {
-  font-size: min(4vw, 4vh);
-  margin-left: min(20vw, 20vh);
-  color: white;
-  font-weight: bold;
-  font-style: italic;
-  text-shadow: 0 min(0.2vw, 0.2vh) min(0.3vw, 0.3vh) rgba(0, 0, 0, 0.445);
-}
-
-.cookieLinkTextHidden,
-.cookieLinkIconHidden {
-  opacity: 0;
-}
-
-.cookieLinkIcon {
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: min(10vw, 10vh);
-  filter: drop-shadow(
-    0 min(0.2vw, 0.2vh) min(0.3vw, 0.3vh) rgba(0, 0, 0, 0.445)
-  );
 }
 
 @keyframes pulse {
