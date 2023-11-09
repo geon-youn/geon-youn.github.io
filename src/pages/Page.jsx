@@ -1,5 +1,4 @@
 import Transition from '../components/Transition';
-import Header from '../components/Header';
 import { useEffect, useState } from 'react';
 
 function Page({ children, page = 'Home' }) {
@@ -19,9 +18,6 @@ function Page({ children, page = 'Home' }) {
     <>
       {/* transition */}
       {showTransition ? <Transition page={page} /> : null}
-
-      {/* header */}
-      {page !== 'Home' ? <Header page={page}></Header> : null}
 
       {/* main content */}
       {children}
