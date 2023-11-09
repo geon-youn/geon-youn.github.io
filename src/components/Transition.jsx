@@ -8,19 +8,14 @@ import styles from '../styles/transition.module.css';
 import { useEffect, useState } from 'react';
 
 const transitions = {
-  Home: {
+  logo: {
     className: styles.homeTransition,
     src: '/img/icon.png',
     alt: 'Geon osu! logo',
   },
-  // Contact: {
-  //   className: styles.contactTransition,
-  //   src: '/img/letsplay.png',
-  //   alt: "[Let'sPlay]",
-  // },
 };
 
-function Transition({ page }) {
+function Transition({ home, type = 'logo' }) {
   // hide transition after a few seconds
   const [showTransition, setShowTransition] = useState(true);
 
@@ -34,13 +29,13 @@ function Transition({ page }) {
   }, []);
 
   // If the page's transition isn't implemented, then ignore the transition
-  if (!page || !(page in transitions)) {
+  if (!type || !(type in transitions)) {
     return null;
   }
 
-  const transition = transitions[page];
+  const transition = transitions[type];
 
-  return showTransition ? (
+  return showTransition && !home ? (
     <div className={styles.transition}>
       <div className={styles.blur}></div>
       <img

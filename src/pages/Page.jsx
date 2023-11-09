@@ -1,10 +1,10 @@
 import Transition from '../components/Transition';
 
-function Page({ children, page = 'Home' }) {
+function Page({ children, name = null }) {
   return (
     <>
       {/* transition */}
-      <Transition page={page} />
+      <Transition home={name === 'Home'} />
 
       {/* main content */}
       {children}
