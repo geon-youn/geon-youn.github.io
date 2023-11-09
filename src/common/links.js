@@ -1,9 +1,4 @@
-import {
-  mdiClipboardAccountOutline,
-  mdiClipboardTextMultipleOutline,
-  mdiAccountGroupOutline,
-  mdiFileAccount,
-} from '@mdi/js';
+import { mdiChevronRight, mdiChevronLeft, mdiScriptText } from '@mdi/js';
 
 // Path for GitHub logo since it's getting removed from mdi
 const gitHub =
@@ -16,19 +11,9 @@ const gitHub =
  */
 const links = [
   {
-    data: { href: '/#/about' },
-    text: 'About',
-    path: mdiClipboardAccountOutline,
-  },
-  {
-    data: { href: '/#/projects' },
-    text: 'Projects',
-    path: mdiClipboardTextMultipleOutline,
-  },
-  {
-    data: { href: '/#/contact' },
-    text: 'Contact',
-    path: mdiAccountGroupOutline,
+    data: { href: '/#/play' },
+    text: 'Play',
+    path: mdiChevronRight,
   },
   {
     data: {
@@ -37,7 +22,7 @@ const links = [
       rel: 'noopener',
     },
     text: 'Resume',
-    path: mdiFileAccount,
+    path: mdiScriptText,
   },
   {
     data: {
@@ -47,6 +32,10 @@ const links = [
     },
     text: 'GitHub',
     path: gitHub,
+  },
+  {
+    text: 'Back',
+    path: mdiChevronLeft,
   },
 ];
 

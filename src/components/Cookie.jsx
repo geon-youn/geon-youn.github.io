@@ -53,7 +53,12 @@ function Cookie() {
         <div className={styles.clip}>
           {links.map((i) => {
             return (
-              <a key={i.text} {...i.data} className={styles.cookieLink}>
+              <a
+                key={i.text}
+                {...i.data}
+                className={styles.cookieLink}
+                onClick={i.text === 'Back' ? handleClick : null}
+              >
                 {/* link text */}
                 <div className={expandClasses('cookieLinkText')}>{i.text}</div>
                 {/* link svg */}
