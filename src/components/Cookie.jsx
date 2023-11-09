@@ -1,20 +1,7 @@
-/**
- * --- Cookie ---
- *
- * Expands on click to show links to different sections of the site.
- * - About
- * - Projects
- * - Contact
- * - Resume*
- * - GitHub*
- *
- * *External links to another site.
- */
-
-import { useState } from 'react';
 import Icon from '@mdi/react';
 import styles from '../styles/cookie.module.css';
 import links from '../common/links';
+import { useState } from 'react';
 
 function Cookie() {
   // expand the cookie
