@@ -5,6 +5,7 @@
  */
 
 import styles from '../styles/transition.module.css';
+import { useEffect, useState } from 'react';
 
 const transitions = {
   Home: {
@@ -20,6 +21,18 @@ const transitions = {
 };
 
 function Transition({ page }) {
+  // hide transition after a few seconds
+  const [showTransition, setShowTransition] = useState(true);
+
+  useEffect(() => {
+    const key = setTimeout(() => {
+      setShowTransition(false);
+    }, 1500);
+    return () => {
+      clearTimeout(key);
+    };
+  }, []);
+
   // If the page's transition isn't implemented, then ignore the transition
   if (!page || !(page in transitions)) {
     return null;
@@ -27,7 +40,7 @@ function Transition({ page }) {
 
   const transition = transitions[page];
 
-  return (
+  return showTransition ? (
     <div className={styles.transition}>
       <div className={styles.blur}></div>
       <img
@@ -36,7 +49,7 @@ function Transition({ page }) {
         alt={transition.alt}
       />
     </div>
-  );
+  ) : null;
 }
 
 export default Transition;
