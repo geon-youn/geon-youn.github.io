@@ -5,7 +5,7 @@
   width: 100%;
   height: min(11vw, 11vh);
   background-color: black;
-  border-top: solid min(0.4vw, 0.4vh) blue;
+  border-top: solid min(0.4vw, 0.4vh) #3858e5;
   display: flex;
   align-items: center;
 }
