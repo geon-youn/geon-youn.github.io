@@ -1,0 +1,49 @@
+.button {
+  display: flex;
+  width: min(15vw, 15vh);
+  height: min(5vw, 5vh);
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  transition: 0.25s;
+  text-decoration: none;
+}
+
+.button:hover {
+  width: min(20vw, 20vh);
+  transition: 0.25s;
+}
+
+.left > svg {
+  width: min(2vw, 2vh);
+}
+
+.left,
+.right {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left {
+  flex: auto;
+  box-sizing: border-box;
+  padding-right: min(2vw, 2vh);
+  width: min(10vw, 10vh);
+  background-color: #ef996d;
+}
+
+.right {
+  flex: none;
+  width: min(8vw, 8vh);
+  height: min(5.5vw, 5.5vh);
+  font-size: min(2vw, 2vh);
+  color: white;
+  background-color: #ffa97d;
+  transform: skewX(-10deg) translateX(max(-2vw, -2vh));
+}
+
+.right > div {
+  transform: skewX(10deg);
+}
