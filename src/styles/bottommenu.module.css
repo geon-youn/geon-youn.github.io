@@ -20,5 +20,5 @@
   flex: none;
   height: 100%;
   border-top: solid min(0.4vw, 0.4vh) #8452ce;
-  transform: translateY(max(-0.1vw, -0.1vh));
+  transform: translateY(max(-0.2vw, -0.2vh));
 }
