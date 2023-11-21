@@ -38,7 +38,7 @@ function Mode() {
           expand ? { 'background-color': 'rgba(255, 255, 255, 0.05)' } : null
         }
       >
-        <Icon path={currentMode.path} size={1} color={'white'}></Icon>
+        <Icon path={currentMode.path} size='min(3vw, 3vh)' color={'white'}></Icon>
         <div>Mode</div>
       </div>
       {expand ? (
@@ -54,7 +54,7 @@ function Mode() {
                   setExpand(() => false);
                 }}
               >
-                <Icon path={mode.path} size={4} color={'white'}></Icon>
+                <Icon path={mode.path} size='min(6vw, 6vh)' color={'white'}></Icon>
                 <div>{mode.name}</div>
               </div>
             );
