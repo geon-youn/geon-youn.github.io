@@ -17,7 +17,7 @@ function useOutsideMode(ref, setExpandFalse) {
     return () => {
       document.removeEventListener('click', handleOutsideClick);
     };
-  }, [ref]);
+  }, [ref, setExpandFalse]);
 }
 
 function Mode() {
