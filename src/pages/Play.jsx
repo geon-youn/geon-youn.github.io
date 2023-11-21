@@ -14,9 +14,14 @@ function Play() {
       <ModeContext.Provider value={modeValue}>
         <div className={styles.darkenBackground}></div>
         <BottomMenu></BottomMenu>
-        <div className={styles.bottomLeftCookie}>
+        <a
+          className={styles.bottomLeftCookie}
+          href="https://osu.ppy.sh/users/geon"
+          target="_blank"
+          rel="noreferrer"
+        >
           <Cookie></Cookie>
-        </div>
+        </a>
       </ModeContext.Provider>
     </Page>
   );

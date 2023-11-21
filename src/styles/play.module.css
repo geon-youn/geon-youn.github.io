@@ -4,6 +4,7 @@
   bottom: max(-10vw, -10vh);
   transform: scale(0.65) translate(25%, 25%);
   user-select: none;
+  border-radius: 100%;
 }
 
 .darkenBackground {
