@@ -8,24 +8,15 @@ Uses hash routing because it's hosted on GitHub Pages and I want to use client r
 
 ### [Home Page](https://geon-youn.github.io/)
 
-Displays the osu! "cookie" with "osu" replaced with "geon" and recoloured orange. Click to expand it to show links to the routes below. 
+Displays the [osu!](https://osu.ppy.sh/) logo, but with "osu" replaced with "geon" and recoloured orange. 
 
-### [About Page](https://geon-youn.github.io/#/about)
+Click to expand it to show different links.
 
-Displays information about me like a bio and known skills.
+### [Play Page](https://geon-youn.github.io/#/play)
 
-### [Projects Page](https://geon-youn.github.io/#/projects)
+Based off the song selection screen in osu!. 
 
-Displays projects I completed and links to its GitHub repo.
+Change the modes to show different information on the right side of the screen.
 
-### [Contact Page](https://geon-youn.github.io/#/contact)
+Click the "geon!" button on the bottom right corner to open my osu! page in a new tab. 
 
-Displays my contact information.
-
-### <a href="https://github.com/geon-youn/resume" target="_blank" rel="noopener">Resume</a>
-
-Opens my resume in a new tab.
-
-### <a href="https://github.com/geon-youn/" target="_blank" rel="noopener">GitHub</a>
-
-Opens my GitHub profile in a new tab.
