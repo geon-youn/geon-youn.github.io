@@ -1,5 +1,5 @@
 .modeParent {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(rgba(255, 255, 255, 0.35), rgba(0, 0, 0, 0));
   height: 100%;
   width: min(10vw, 10vh);
   color: white;
@@ -7,6 +7,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 max(-0.3vw, -0.3vh) 0 #8452ce;
+  border-left: solid min(0.1vw, 0.1vh) rgba(255, 255, 255, 0.3);
+  border-right: solid min(0.1vw, 0.1vh) rgba(255, 255, 255, 0.3);
+  position: relative;
 }
 
 .modeButton {
@@ -21,16 +25,16 @@
 }
 
 .modeButton:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .modeButton:active {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 #modes {
   position: absolute;
-  bottom: min(11.3vw, 11.3vh);
+  bottom: min(11.4vw, 11.4vh);
   left: 0;
   transform-origin: bottom;
 }
@@ -39,7 +43,7 @@
   width: min(40vw, 40vh);
   height: min(12vw, 12vh);
   font-size: min(3vw, 3vh);
-  font-weight: bold;
+  font-family: 'Aller', sans-serif;
   display: flex;
   align-items: center;
   gap: min(2vw, 2vh);
@@ -53,9 +57,9 @@
 }
 
 .mode:hover {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .mode:active {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.4);
 }

@@ -8,8 +8,10 @@ function BottomMenu() {
       <div className={styles.backButton}>
         <BackButton></BackButton>
       </div>
-      <div className={styles.modeButton}>
-        <Mode></Mode>
+      <div className={styles.buttons}>
+        <div className={styles.modeButton}>
+          <Mode></Mode>
+        </div>
       </div>
     </footer>
   );
