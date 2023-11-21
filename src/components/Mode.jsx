@@ -35,7 +35,7 @@ function Mode() {
           setExpand((e) => !e);
         }}
         style={
-          expand ? { 'background-color': 'rgba(255, 255, 255, 0.3)' } : null
+          expand ? { 'background-color': 'rgba(255, 255, 255, 0.05)' } : null
         }
       >
         <Icon path={currentMode.path} size={1} color={'white'}></Icon>
