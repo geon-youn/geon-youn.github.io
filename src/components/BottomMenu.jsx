@@ -12,6 +12,14 @@ function BottomMenu() {
         <div className={styles.modeButton}>
           <Mode></Mode>
         </div>
+        <a
+          className={styles.linkedInButton}
+          href="https://www.linkedin.com/in/geon-youn/"
+          target="_blank"
+          rel='noreferrer'
+        >
+          LinkedIn
+        </a>
       </div>
     </footer>
   );
