@@ -20,6 +20,14 @@ function BottomMenu() {
         >
           LinkedIn
         </a>
+        <a
+          className={styles.gitHubButton}
+          href="https://github.com/geon-youn/geon-youn.github.io"
+          target="_blank"
+          rel='noreferrer'
+        >
+          GitHub
+        </a>
       </div>
     </footer>
   );

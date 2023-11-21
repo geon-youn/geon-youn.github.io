@@ -13,7 +13,7 @@
 .backButton 
 {
   flex: none;
-  width: min(30vw, 30vh);
+  width: min(25vw, 25vh);
 }
 
 .modeButton
@@ -29,7 +29,8 @@
   gap: min(0.25vw, 0.25vh);
 }
 
-.linkedInButton {
+.linkedInButton,
+.gitHubButton {
   background-image: linear-gradient(rgba(255, 255, 255, 0.35), rgba(0, 0, 0, 0));
   height: 100%;
   width: min(10vw, 10vh);
@@ -38,16 +39,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 max(-0.3vw, -0.3vh) 0 #bb63aa;
   border-left: solid min(0.1vw, 0.1vh) rgba(255, 255, 255, 0.3);
   border-right: solid min(0.1vw, 0.1vh) rgba(255, 255, 255, 0.3);
   text-decoration: none;
+  font-size: min(2vw, 2vh);
 }
 
-.linkedInButton:hover {
+.linkedInButton {
+  box-shadow: 0 max(-0.3vw, -0.3vh) 0 #bb63aa;
+}
+
+.gitHubButton {
+  box-shadow: 0 max(-0.3vw, -0.3vh) 0 #94c154;
+}
+
+.linkedInButton:hover,
+.gitHubButton:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.linkedInButton:active {
+.linkedInButton:active,
+.gitHubButton:active {
   background-color: rgba(255, 255, 255, 0.05);
 }
