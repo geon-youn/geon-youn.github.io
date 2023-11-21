@@ -1,7 +1,7 @@
 .modeParent {
   background-image: linear-gradient(rgba(255, 255, 255, 0.35), rgba(0, 0, 0, 0));
   height: 100%;
-  width: min(10vw, 10vh);
+  width: min(11vw, 11vh);
   color: white;
   user-select: none;
   display: flex;
