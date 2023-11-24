@@ -6,29 +6,72 @@ import { useState, useEffect, useCallback, useMemo } from 'react';
 import ModeContext from '../contexts/ModeContext';
 
 const bellCurve = (x) => {
-  return Math.exp(Math.pow(x, 2) / (-2)) / Math.sqrt(2 * Math.PI)
-}
+  return Math.exp(Math.pow(x, 2) / -2) / Math.sqrt(2 * Math.PI);
+};
 
 function Play() {
   const [mode, setMode] = useState(0);
   const [currentSong, setCurrentSong] = useState(0);
+  const [drag, setDrag] = useState(false);
+  const [prevTouch, setPrevTouch] = useState(null);
   const modeValue = { mode, setMode };
   const songList = useMemo(() => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], []);
+  const returnNewSong = useMemo(
+    () => (currentSong, delta) => {
+      const newSong = currentSong + delta;
+      if (newSong <= 0) {
+        return 0;
+      } else if (newSong >= songList.length - 1) {
+        return songList.length - 1;
+      }
+      return newSong;
+    },
+    [songList.length]
+  );
 
+  // Move songlist through wheel
   const handleWheel = useCallback(
     (e) => {
-      const deltaSong = (e.deltaY < 0 ? -1 : 1);
-      setCurrentSong((currentSong) => {
-        const newSong = currentSong + deltaSong;
-        if (newSong <= 0) {
-          return 0;
-        } else if (newSong >= songList.length - 1) {
-          return songList.length - 1;
-        }
-        return newSong;
-      });
+      const delta = e.deltaY * 0.01;
+      setCurrentSong((currentSong) => returnNewSong(currentSong, delta));
     },
-    [songList]
+    [returnNewSong]
+  );
+
+  const handleDrag = useCallback(
+    (e) => {
+      const delta = e.movementY * -0.01;
+      setCurrentSong((currentSong) => returnNewSong(currentSong, delta));
+    },
+    [returnNewSong]
+  );
+
+  const handleTouch = useCallback(
+    (e) => {
+      const touch = e.touches[0];
+
+      if (prevTouch) {
+        const delta = (prevTouch.pageY - touch.pageY) * 0.01;
+        setCurrentSong((currentSong) => returnNewSong(currentSong, delta));
+      }
+
+      setPrevTouch(() => touch);
+    },
+    [returnNewSong, prevTouch]
+  );
+
+  const handleKey = useCallback(
+    (e) => {
+      const roundedCurrentSong = Math.round(currentSong);
+      const delta =
+        e.key === 'ArrowDown' || e.key === 'ArrowRight'
+          ? 1
+          : e.key === 'ArrowUp' || e.key === 'ArrowLeft'
+          ? -1
+          : 0;
+      setCurrentSong(() => returnNewSong(roundedCurrentSong, delta));
+    },
+    [returnNewSong, currentSong]
   );
 
   useEffect(() => {
@@ -39,6 +82,14 @@ function Play() {
     };
   }, [handleWheel]);
 
+  useEffect(() => {
+    window.addEventListener('keydown', handleKey);
+
+    return () => {
+      window.removeEventListener('keydown', handleKey);
+    };
+  }, [handleKey]);
+
   return (
     <Page name="Play">
       <ModeContext.Provider value={modeValue}>
@@ -46,15 +97,33 @@ function Play() {
         <div
           className={styles.songs}
           style={{
-            transform: `translateY(${currentSong * (-17) + 50 - 7.5}vh)`,
+            transform: `translateY(${currentSong * -17 + 50 - 7.5}vh)`,
           }}
+          onMouseDown={() => setDrag(true)}
+          onMouseLeave={() => setDrag(false)}
+          onMouseUp={() => setDrag(false)}
+          onTouchStart={() => setDrag(true)}
+          onTouchEnd={() => {
+            setDrag(false);
+            setPrevTouch(null);
+          }}
+          onTouchMove={(e) => (drag ? handleTouch(e) : null)}
+          onMouseMove={(e) => (drag ? handleDrag(e) : null)}
         >
           {songList.map((i, idx) => {
+            const bell =
+              bellCurve(Math.round(currentSong - idx)) * Math.sqrt(2 * Math.PI);
             return (
-              <div className={styles.song} key={i} style={{
-                transform: `translateX(${-bellCurve((currentSong - idx)) * 10 + 5}vw)`
-              }}>
-                a
+              <div
+                className={styles.song}
+                key={i}
+                style={{
+                  transformOrigin: `right center`,
+                  transform: `translateX(${-bell * 5 + 5}vw)`,
+                }}
+                onClick={() => setCurrentSong(() => idx)}
+              >
+                {idx}
               </div>
             );
           })}
