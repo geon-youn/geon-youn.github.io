@@ -2,7 +2,7 @@ import styles from '../styles/cookie.module.css';
 
 function Cookie({ onClick, duration = '0.5s' }) {
   const style = {
-    'animation-duration': duration,
+    'animationDuration': duration,
   };
 
   return (
