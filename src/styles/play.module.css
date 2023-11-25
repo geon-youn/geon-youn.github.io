@@ -20,16 +20,14 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  /* overflow: hidden; */
-  /* gap: min(2vw, 2vh); */
   transition: 0.2s;
   user-select: none;
 }
 
 .song {
   flex: none;
-  width: 40vw;
-  height: 13vh;
+  width: min(80vw, 80vh);
+  height: min(13vw, 13vh);
   transition: 0.4s;
   box-sizing: border-box;
   border: solid min(0.1vw, 0.1vh) black;
@@ -62,4 +60,6 @@
 .songStars {
   display: flex;
   align-items: center;
+  width: 40%;
+  gap: min(1vw, 1vh);
 }

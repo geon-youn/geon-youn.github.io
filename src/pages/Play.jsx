@@ -113,7 +113,9 @@ function Play() {
         <div
           className={styles.songs}
           style={{
-            transform: `translateY(${currentSong * -17 + 50 - 7.5}vh)`,
+            transform: `translateY(calc(50% - min(7vw, 7vh) - min(${
+              14 * currentSong
+            }vw, ${14 * currentSong}vh)))`,
           }}
           onMouseDown={() => setDrag(true)}
           onMouseLeave={() => setDrag(false)}
@@ -126,10 +128,10 @@ function Play() {
           onTouchMove={(e) => (drag ? handleTouch(e) : null)}
           onMouseMove={(e) => (drag ? handleDrag(e) : null)}
         >
-          {songList.map((i, idx) => {
+          {songList.map((song, i) => {
             const bell =
-              bellCurve(Math.round(currentSong - idx)) * Math.sqrt(2 * Math.PI);
-            const current = Math.round(currentSong) === idx;
+              bellCurve(Math.round(currentSong - i)) * Math.sqrt(2 * Math.PI);
+            const current = Math.round(currentSong) === i;
             return (
               <div
                 className={styles.song}
@@ -139,32 +141,33 @@ function Play() {
                   transform: `translateX(${-bell * (current ? 5 : 2) + 5}vw)`,
                   color: current ? 'black' : `white`,
                   backgroundColor: current ? '#f1f1f1' : '#e36808',
-                  margin: current ? 'min(1vw, 1vh) 0' : null,
+                  margin: current ? 'min(2vw, 2vh) 0' : `max(-1vw, -1vh) 0`,
                 }}
-                onClick={() => setCurrentSong(() => idx)}
+                onClick={() => setCurrentSong(() => i)}
               >
                 <div className={styles.songDetails}>
-                  <div className={styles.songTitle}>{i.title}</div>
+                  <div className={styles.songTitle}>{song.title}</div>
                   <div
                     className={styles.songAuthors}
-                  >{`${i.author} // ${i.mapper}`}</div>
-                  <div className={styles.songDifficulty}>{i.difficulty}</div>
+                  >{`${song.author} // ${song.mapper}`}</div>
+                  <div className={styles.songDifficulty}>{song.difficulty}</div>
                   <div className={styles.songStars}>
-                    {Array.from(Array(10).keys()).map((d, idx) => {
-                      const starSize =
-                        (idx + 1 < i.stars
+                    {Array.from(Array(10).keys()).map((dummy, j) => {
+                      const scale =
+                        j + 1 < song.stars
                           ? 1
-                          : idx + 1 === Math.floor(i.stars)
-                          ? (i.stars % 1) / 2 + 0.5
-                          : 0.5) * 2;
+                          : j + 1 === Math.ceil(song.stars)
+                          ? (song.stars % 1) / 2 + 0.5
+                          : 0.5;
                       return (
                         <Icon
-                          key={i.stars + i.title}
+                          key={j}
                           path={mdiStar}
-                          size={`min(${starSize}vw, ${starSize}vh)`}
                           style={{
-                            opacity: idx + 1 > Math.ceil(i.stars) ? 0.5 : 1,
-                            minWidth: 'min(3vw, 3vh)',
+                            opacity: j + 1 > Math.ceil(song.stars) ? 0.5 : 1,
+                            minWidth: 'min(1.5vw, 1.5vh)',
+                            minHeight: 'min(1.5vw, 1.5vh)',
+                            transform: `scale(${scale})`,
                           }}
                         ></Icon>
                       );
