@@ -5,14 +5,14 @@ import Cookie from './Cookie';
 import { useState } from 'react';
 
 function LinkedCookie() {
-  const [expand, setExpand] = useState(true);
+  const [expand, setExpand] = useState(false);
 
   function toggleExpand() {
     setExpand(!expand);
   }
 
   function toggleHidden(name) {
-    return `${styles[name]}${expand ? '' : ' ' + styles[name + 'Hidden']}`
+    return `${styles[name]}${expand ? '' : ' ' + styles[name + 'Hidden']}`;
   }
 
   return (
