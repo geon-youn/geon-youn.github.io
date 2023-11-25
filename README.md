@@ -1,22 +1,31 @@
 # Geon's Personal Website
 
-Made using React. A personal website with elements inspired by my hobbies.
+Welcome to [my website](https://geon-youn.github.io/), which basically copies the style of osu!'s main menu and song selection screen :P.
 
-## Routes
+Since the website is hosted through GitHub Pages, I used hash routing. 
 
-Uses hash routing because it's hosted on GitHub Pages and I want to use client routing. 
+## Home Page 
 
-### [Home Page](https://geon-youn.github.io/)
+The home page displays the osu! logo with "osu" replaced by "geon" and recoloured orange. It beats at 120 bpm. 
 
-Displays the [osu!](https://osu.ppy.sh/) logo, but with "osu" replaced with "geon" and recoloured orange. 
+When you click on the logo, it expands to show different links: the play page, my resume, my GitHub, and closing the logo. 
 
-Click to expand it to show different links.
+## Play Page (i.e. song selection)
 
-### [Play Page](https://geon-youn.github.io/#/play)
+Broken into 3 modes so far, which shows different "songs" depending on the mode. 
 
-Based off the song selection screen in osu!. 
+When you click on the logo in the bottom right corner, it will take you to my osu! page.
 
-Change the modes to show different information on the right side of the screen.
+Clicking on "LinkedIn" takes you to my LinkedIn page and clicking on "GitHub" takes you to this repo. 
 
-Click the "geon!" button on the bottom right corner to open my osu! page in a new tab. 
+### geon! (About Me)
 
+Each song tells you a little about me :P.
+
+### geon!skills (My Skills)
+
+Each song lists some of my skills.
+
+### geon!projects (My Projects)
+
+Each song lists one of the projects I worked on. If there's a repo to it, when you click on it, it will open its repo on a new tab.
