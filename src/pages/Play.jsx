@@ -114,8 +114,8 @@ function Play() {
           className={styles.songs}
           style={{
             transform: `translateY(calc(50% - min(7vw, 7vh) - min(${
-              14 * currentSong
-            }vw, ${14 * currentSong}vh)))`,
+              12 * currentSong
+            }vw, ${12 * currentSong}vh)))`,
           }}
           onMouseDown={() => setDrag(true)}
           onMouseLeave={() => setDrag(false)}
