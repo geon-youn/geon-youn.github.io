@@ -37,7 +37,7 @@
 .right {
   flex: none;
   width: min(8vw, 8vh);
-  height: min(5.5vw, 5.5vh);
+  height: min(5vw, 5vh);
   font-size: min(2vw, 2vh);
   color: white;
   background-color: #ffa97d;
