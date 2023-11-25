@@ -4,6 +4,7 @@ import ModeContext from '../contexts/ModeContext';
 import { modesData } from '../common/modes';
 import { useState, useEffect, useCallback, useMemo, useContext } from 'react';
 
+// For moving the songs horizontally depending on how far they are from the currently focused song
 function bellCurve(x) {
   return Math.exp(Math.pow(x, 2) / -2);
 }
@@ -23,7 +24,7 @@ function SongList() {
     []
   );
 
-  // Periodically round currentSong to an int and keep it within bounds
+  // Periodically round currentSong and keep it within bounds
   useEffect(() => {
     const key = setInterval(
       () =>
@@ -110,11 +111,14 @@ function SongList() {
   return (
     <div
       className={styles.songs}
+      // Move the songlist depending on the currently focused song
+      // Keep the focused song vertically centered in the screen
       style={{
         transform: `translateY(calc(50% - min(7vw, 7vh) - min(${
           12 * currentSong
         }vw, ${12 * currentSong}vh)))`,
       }}
+      // Events to set being able to drag the songlist
       onMouseDown={() => setDrag(true)}
       onMouseLeave={() => setDrag(false)}
       onMouseUp={() => setDrag(false)}
@@ -123,12 +127,13 @@ function SongList() {
         setDrag(false);
         setPrevTouch(null);
       }}
+      // Move the songlist when the user meets conditions to drag
       onTouchMove={(e) => (drag ? handleTouch(e) : null)}
       onMouseMove={(e) => (drag ? handleDrag(e) : null)}
     >
+      {/* Display each song in the songlist */}
       {songList.map((song, i) => {
-        const bell =
-          bellCurve(Math.round(currentSong - i));
+        const bell = bellCurve(Math.round(currentSong - i));
         const current = Math.round(currentSong) === i;
         return (
           <Song

@@ -4,6 +4,7 @@ import {
   mdiClipboardTextMultiple,
 } from '@mdi/js';
 
+// Factory to create mode
 const mode = (name, path) => {
   return {
     name,
@@ -11,12 +12,14 @@ const mode = (name, path) => {
   };
 };
 
+// List of modes for Play
 export const modes = [
   mode('geon!', mdiAccount),
   mode('geon!skills', mdiAccountDetails),
   mode('geon!projects', mdiClipboardTextMultiple),
 ];
 
+// Factory to create songs
 const song = (title, author, mapper, difficulty, stars, href) => {
   return {
     title,
@@ -28,6 +31,7 @@ const song = (title, author, mapper, difficulty, stars, href) => {
   };
 };
 
+// List of songs for each mode (0 = geon!), (1 = geon!skills), (2 = geon!projects)
 export const modesData = [
   // About
   [

@@ -1,3 +1,7 @@
+/**
+ * Each song in the song list in Play page
+ */
+
 import styles from '../styles/song.module.css';
 import Icon from '@mdi/react';
 import { mdiStar } from '@mdi/js';
@@ -24,6 +28,7 @@ function Song({ style, song, onClick, focused }) {
     >
       <div className={styles.songDetails}>
         <div className={styles.songTitle}>{song.title}</div>
+        {/* Only show // when both author and mapper are defined */}
         <div className={styles.songAuthors}>{`${song.author}${
           song.author && song.mapper ? ' // ' : ''
         }${song.mapper}`}</div>

@@ -1,3 +1,7 @@
+/**
+ * Cookie aka the logo for the website
+ */
+
 import styles from '../styles/cookie.module.css';
 
 function Cookie({ onClick, duration = '0.5s' }) {
@@ -7,6 +11,7 @@ function Cookie({ onClick, duration = '0.5s' }) {
 
   return (
     <div className={styles.cookie} onClick={onClick}>
+      {/* Two copies to create a nicer pulse effect */}
       <img
         className={styles.cookieMain}
         style={style}

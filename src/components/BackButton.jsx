@@ -1,5 +1,10 @@
+/**
+ * Back button that expands when hovered
+ */
+
 import styles from '../styles/backbutton.module.css';
 
+// White left arrow svg
 function LeftArrow() {
   const style = {
     filter:

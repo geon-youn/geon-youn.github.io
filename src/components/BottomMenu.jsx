@@ -1,3 +1,7 @@
+/**
+ * Bottom menu for the Play page
+ */
+
 import styles from '../styles/bottommenu.module.css';
 import BackButton from './BackButton';
 import Mode from './Mode';
@@ -5,9 +9,11 @@ import Mode from './Mode';
 function BottomMenu() {
   return (
     <footer className={styles.bottomMenu}>
+      {/* Back button */}
       <div className={styles.backButton}>
         <BackButton></BackButton>
       </div>
+      {/* Extra buttons */}
       <div className={styles.buttons}>
         <div className={styles.modeButton}>
           <Mode></Mode>

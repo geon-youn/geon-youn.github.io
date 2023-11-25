@@ -1,3 +1,7 @@
+/**
+ * Mode context for keeping track of the current mode
+ */
+
 import { createContext } from 'react';
 
 const ModeContext = createContext({
