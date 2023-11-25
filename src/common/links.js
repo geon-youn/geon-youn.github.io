@@ -19,7 +19,7 @@ const linkItem = (href, text, path, newTab = false) => {
 const links = [
   linkItem('/#/play', 'Play', mdiChevronRight),
   linkItem(
-    'https://github.com/geon-youn/resume/blob/de078834c00daca39a76bc05b2c8606f6acfef9d/Geon%20Youn%20-%20Full%20Stack%20Developer.pdf',
+    'https://github.com/geon-youn/resume/blob/main/Geon%20Youn%20-%20Full%20Stack%20Developer.pdf',
     'Resume',
     mdiScriptText,
     true
