@@ -17,13 +17,14 @@ export const modes = [
   mode('geon!projects', mdiClipboardTextMultiple),
 ];
 
-const song = (title, author, mapper, difficulty, stars) => {
+const song = (title, author, mapper, difficulty, stars, href) => {
   return {
     title,
     author,
     mapper,
     difficulty,
-    stars: stars === undefined ? Math.random() * 10 : stars,
+    stars: stars === undefined ? Math.random() * 5 + 5 : stars,
+    href,
   };
 };
 
@@ -95,13 +96,13 @@ export const modesData = [
     ),
     song(
       'Soft Skills',
-      '-',
-      '-',
+      '',
+      '',
       'Time Management, Communication, Adaptability, Problem-Solving, Teamwork'
     ),
     song(
       'Programming Languages',
-      'High School + McMaster University + Online Courses', 
+      'High School + McMaster University + Online Courses',
       '2017 - ongoing',
       'C++, C, Java, Python, Haskell, Prolog, Elm'
     ),
@@ -116,8 +117,47 @@ export const modesData = [
       'McMaster University',
       '2nd Year: COMPSCI 2ME3',
       ''
-    )
+    ),
   ],
   // Projects
-  [],
+  [
+    song(
+      'McMaster Room Booking',
+      'McMaster University',
+      '3rd year: COMPSCI 4HC3',
+      'Made room booking for McMaster students easier through HCD'
+    ),
+    song(
+      'Education Data for Change',
+      'DeltaHacks IX',
+      'Jan. 2023',
+      'Built a tool to discover insights into the Ontario education system',
+      undefined,
+      'https://github.com/owengretzinger/education-data-for-change'
+    ),
+    song(
+      'Blog API',
+      'The Odin Project',
+      'Sep. 2023',
+      'Built a RESTful API for blogs using Express',
+      undefined,
+      'https://github.com/geon-youn/blog-api'
+    ),
+    song(
+      'Deep Learning Blog',
+      'fast.ai',
+      'Feb. 2022 - May. 2022',
+      'Kept track of my deep learning journey through a blog',
+      undefined,
+      'https://geon-youn.github.io/DunGeon/'
+    ),
+    song(
+      'The Trig Project',
+      'McMaster University',
+      '1st year: COMPSCI 1XD3',
+      'Helped high school students learn trigonometry by building an app through HCD',
+      undefined,
+      'https://github.com/youcefs21/TheTrigProject'
+    ),
+  ],
 ];
