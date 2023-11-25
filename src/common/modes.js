@@ -38,13 +38,13 @@ export const modesData = [
     song(
       '3rd Year Computer Science Undergraduate',
       'McMaster University',
-      'Sep. 2021 - Apr. 2024',
+      'Sep. 2021 - Apr. 2025',
       '3.9+ GPA'
     ),
     song(
       'Varsity Rower',
       'McMaster University',
-      'Sep. 2021 - Apr. 2024',
+      'Sep. 2021 - ongoing',
       'Open weight 4+ and 2x'
     ),
     song(
