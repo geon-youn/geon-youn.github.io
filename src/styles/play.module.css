@@ -21,14 +21,45 @@
   flex-direction: column;
   height: 100%;
   /* overflow: hidden; */
-  gap: min(2vw, 2vh);
+  /* gap: min(2vw, 2vh); */
   transition: 0.2s;
+  user-select: none;
 }
 
 .song {
   flex: none;
   width: 40vw;
-  height: 15vh;
-  background-color: blue;
+  height: 13vh;
   transition: 0.4s;
+  box-sizing: border-box;
+  border: solid min(0.1vw, 0.1vh) black;
+  box-shadow: 0 0 min(3vw, 3vh) rgba(0, 0, 0, 0.5);
+}
+
+.songDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: min(2vw, 2vh);
+}
+
+.songTitle {
+  font-size: min(3vw, 3vh);
+}
+
+.songAuthors,
+.songDifficulty {
+  font-size: min(2vw, 2vh);
+}
+
+.songDifficulty {
+  font-weight: bold;
+}
+
+.songStars {
+  display: flex;
+  align-items: center;
 }

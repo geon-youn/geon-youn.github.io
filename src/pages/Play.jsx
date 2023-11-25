@@ -4,6 +4,9 @@ import BottomMenu from '../components/BottomMenu';
 import styles from '../styles/play.module.css';
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import ModeContext from '../contexts/ModeContext';
+import { modesData } from '../common/modes';
+import Icon from '@mdi/react';
+import { mdiStar } from '@mdi/js';
 
 const bellCurve = (x) => {
   return Math.exp(Math.pow(x, 2) / -2) / Math.sqrt(2 * Math.PI);
@@ -15,10 +18,13 @@ function Play() {
   const [drag, setDrag] = useState(false);
   const [prevTouch, setPrevTouch] = useState(null);
   const modeValue = { mode, setMode };
-  const songList = useMemo(() => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], []);
-  const returnNewSong = useMemo(() => (currentSong, delta) => {
-    return currentSong + delta;
-  }, []);
+  const songList = modesData[mode];
+  const returnNewSong = useMemo(
+    () => (currentSong, delta) => {
+      return currentSong + delta;
+    },
+    []
+  );
 
   useEffect(() => {
     const key = setInterval(
@@ -123,17 +129,48 @@ function Play() {
           {songList.map((i, idx) => {
             const bell =
               bellCurve(Math.round(currentSong - idx)) * Math.sqrt(2 * Math.PI);
+            const current = Math.round(currentSong) === idx;
             return (
               <div
                 className={styles.song}
                 key={i}
                 style={{
                   transformOrigin: `right center`,
-                  transform: `translateX(${-bell * 5 + 5}vw)`,
+                  transform: `translateX(${-bell * (current ? 5 : 2) + 5}vw)`,
+                  color: current ? 'black' : `white`,
+                  backgroundColor: current ? '#f1f1f1' : '#e36808',
+                  margin: current ? 'min(1vw, 1vh) 0' : null,
                 }}
                 onClick={() => setCurrentSong(() => idx)}
               >
-                {idx}
+                <div className={styles.songDetails}>
+                  <div className={styles.songTitle}>{i.title}</div>
+                  <div
+                    className={styles.songAuthors}
+                  >{`${i.author} // ${i.mapper}`}</div>
+                  <div className={styles.songDifficulty}>{i.difficulty}</div>
+                  <div className={styles.songStars}>
+                    {Array.from(Array(10).keys()).map((d, idx) => {
+                      const starSize =
+                        (idx + 1 < i.stars
+                          ? 1
+                          : idx + 1 === Math.floor(i.stars)
+                          ? (i.stars % 1) / 2 + 0.5
+                          : 0.5) * 2;
+                      return (
+                        <Icon
+                          key={i.stars + i.title}
+                          path={mdiStar}
+                          size={`min(${starSize}vw, ${starSize}vh)`}
+                          style={{
+                            opacity: idx + 1 > Math.ceil(i.stars) ? 0.5 : 1,
+                            minWidth: 'min(3vw, 3vh)',
+                          }}
+                        ></Icon>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
             );
           })}
