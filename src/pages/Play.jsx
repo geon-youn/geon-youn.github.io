@@ -16,18 +16,28 @@ function Play() {
   const [prevTouch, setPrevTouch] = useState(null);
   const modeValue = { mode, setMode };
   const songList = useMemo(() => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], []);
-  const returnNewSong = useMemo(
-    () => (currentSong, delta) => {
-      const newSong = currentSong + delta;
-      if (newSong <= 0) {
-        return 0;
-      } else if (newSong >= songList.length - 1) {
-        return songList.length - 1;
-      }
-      return newSong;
-    },
-    [songList.length]
-  );
+  const returnNewSong = useMemo(() => (currentSong, delta) => {
+    return currentSong + delta;
+  }, []);
+
+  useEffect(() => {
+    const key = setInterval(
+      () =>
+        setCurrentSong((currentSong) => {
+          if (currentSong < 0) {
+            return 0;
+          } else if (currentSong > songList.length - 1) {
+            return songList.length - 1;
+          }
+          return Math.round(currentSong);
+        }),
+      1000
+    );
+
+    return () => {
+      clearInterval(key);
+    };
+  }, [songList.length]);
 
   // Move songlist through wheel
   const handleWheel = useCallback(
