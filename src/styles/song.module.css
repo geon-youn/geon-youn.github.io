@@ -6,6 +6,7 @@
   box-sizing: border-box;
   border: solid min(0.1vw, 0.1vh) black;
   box-shadow: 0 0 min(3vw, 3vh) rgba(0, 0, 0, 0.5);
+  text-decoration: none;
 }
 
 .songDetails {

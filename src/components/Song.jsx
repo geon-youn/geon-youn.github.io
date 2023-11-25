@@ -1,15 +1,32 @@
 import styles from '../styles/song.module.css';
 import Icon from '@mdi/react';
 import { mdiStar } from '@mdi/js';
+import { useEffect, useState } from 'react';
 
-function Song({ style, song }) {
+function Song({ style, song, onClick, focused }) {
+  // Prevent link from opening as soon as the song is clicked
+  const [href, setHref] = useState(null);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setHref(focused ? song.href : null);
+    });
+  }, [focused, song]);
+
   return (
-    <div className={styles.song} style={style}>
+    <a
+      className={styles.song}
+      style={style}
+      target="_blank"
+      rel="noreferrer"
+      href={href}
+      onClick={onClick}
+    >
       <div className={styles.songDetails}>
         <div className={styles.songTitle}>{song.title}</div>
-        <div
-          className={styles.songAuthors}
-        >{`${song.author} // ${song.mapper}`}</div>
+        <div className={styles.songAuthors}>{`${song.author}${
+          song.author && song.mapper ? ' // ' : ''
+        }${song.mapper}`}</div>
         <div className={styles.songDifficulty}>{song.difficulty}</div>
         <div className={styles.songStars}>
           {Array.from(Array(10).keys()).map((dummy, j) => {
@@ -34,7 +51,7 @@ function Song({ style, song }) {
           })}
         </div>
       </div>
-    </div>
+    </a>
   );
 }
 

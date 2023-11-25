@@ -1,11 +1,11 @@
-import styles from '../styles/songlist.module.css'
+import styles from '../styles/songlist.module.css';
 import Song from '../components/Song';
 import ModeContext from '../contexts/ModeContext';
 import { modesData } from '../common/modes';
 import { useState, useEffect, useCallback, useMemo, useContext } from 'react';
 
 function bellCurve(x) {
-  return Math.exp(Math.pow(x, 2) / -2) / Math.sqrt(2 * Math.PI);
+  return Math.exp(Math.pow(x, 2) / -2);
 }
 
 function SongList() {
@@ -128,7 +128,7 @@ function SongList() {
     >
       {songList.map((song, i) => {
         const bell =
-          bellCurve(Math.round(currentSong - i)) * Math.sqrt(2 * Math.PI);
+          bellCurve(Math.round(currentSong - i));
         const current = Math.round(currentSong) === i;
         return (
           <Song
@@ -141,6 +141,7 @@ function SongList() {
               margin: current ? 'min(2vw, 2vh) 0' : `max(-1vw, -1vh) 0`,
             }}
             song={song}
+            focused={current}
             onClick={() => setCurrentSong(() => i)}
           ></Song>
         );
