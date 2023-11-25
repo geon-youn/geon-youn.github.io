@@ -1,0 +1,10 @@
+.songs {
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: 0.2s;
+  user-select: none;
+}
