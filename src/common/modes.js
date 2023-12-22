@@ -4,6 +4,8 @@ import {
   mdiClipboardTextMultiple,
 } from '@mdi/js';
 
+import dayjs from 'dayjs';
+
 // Factory to create mode
 const mode = (name, path) => {
   return {
@@ -19,14 +21,17 @@ export const modes = [
   mode('geon!projects', mdiClipboardTextMultiple),
 ];
 
+const today = dayjs();
+const getDay = (date) => dayjs(date, 'M/D/YYYY');
+
 // Factory to create songs
-const song = (title, author, mapper, difficulty, stars, href) => {
+const song = (title, author, mapper, difficulty, startDate, href) => {
   return {
     title,
     author,
     mapper,
     difficulty,
-    stars: stars === undefined ? Math.random() * 5 + 5 : stars,
+    stars: today.diff(getDay(startDate), 'y', true),
     href,
   };
 };
@@ -36,34 +41,39 @@ export const modesData = [
   // About
   [
     song(
-      '3rd Year Computer Science Undergraduate',
+      'Honours Computer Science Co-op',
       'McMaster University',
-      'Sep. 2021 - Apr. 2025',
-      '3.9+ GPA'
+      'Sep 2021 - Apr 2025',
+      '3.9/4.0 GPA',
+      getDay('9/1/2021')
     ),
     song(
       'Varsity Rower',
-      'McMaster University',
-      'Sep. 2021 - ongoing',
-      'Open weight 4+ and 2x'
+      'McMaster University Rowing Club',
+      'Aug 2021 - Present',
+      'Open weight 4+ and 2x',
+      getDay('8/20/2021')
     ),
     song(
       'Full-Stack Web Developer',
       'The Odin Project',
-      'Dec. 2022 - ongoing',
-      'React + NodeJS/Express'
+      'Dec 2022 - Present',
+      'React + NodeJS/Express',
+      getDay('12/1/2022')
     ),
     song(
       'Canada Top #150 osu! Player',
       'osu!',
-      'Jun. 2017 - ongoing',
-      'Tablet + Keyboard'
+      'Jun. 2017 - Present',
+      'Tablet + Keyboard',
+      getDay('7/18/2017')
     ),
     song(
       'Support Main in Lost Ark',
       'Lost Ark',
-      'Feb. 2022 - ongoing',
-      'Bard best support'
+      'Feb. 2022 - Present',
+      'Bard best support',
+      getDay('2/11/2022')
     ),
   ],
   // Skills
@@ -71,7 +81,7 @@ export const modesData = [
     song(
       'Basic Web Skills',
       'The Odin Project',
-      'Dec. 2022 - ongoing',
+      'Dec. 2022 - Present',
       'JavaScript, HTML, CSS'
     ),
     song(
@@ -83,19 +93,19 @@ export const modesData = [
     song(
       'Basic Back-end Skills',
       'The Odin Project',
-      'Dec. 2022 - ongoing',
+      'Dec. 2022 - Present',
       'NodeJS, ExpressJS (+ RESTful APIs)'
     ),
     song(
       'Authentication',
       'The Odin Project',
-      'Dec. 2022 - ongoing',
-      'PassportJS, JavascriptWebTokens'
+      'Dec. 2022 - Present',
+      'PassportJS, JSON Web Tokens'
     ),
     song(
       'Databases',
       'The Odin Project + McMaster University',
-      'Jan. 2022 - ongoing',
+      'Jan. 2022 - Present',
       'SQL, DB2, Relational Algebra, Mongoose, MongoDB Atlas'
     ),
     song(
@@ -107,7 +117,7 @@ export const modesData = [
     song(
       'Programming Languages',
       'High School + McMaster University + Online Courses',
-      '2017 - ongoing',
+      '2017 - Present',
       'C++, C, Java, Python, Haskell, Prolog, Elm'
     ),
     song(
