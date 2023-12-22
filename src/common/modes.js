@@ -22,7 +22,7 @@ export const modes = [
 ];
 
 const today = dayjs();
-const getDay = (date) => dayjs(date, 'M/D/YYYY');
+const getDay = (date) => dayjs(date, 'MM/DD/YYYY');
 
 // Factory to create songs
 const song = (title, author, mapper, difficulty, startDate, href) => {
@@ -38,96 +38,70 @@ const song = (title, author, mapper, difficulty, startDate, href) => {
 
 const about = [
   song(
-    'Honours Computer Science Co-op',
+    'BASc in Honours Computer Science (Co-op)',
     'McMaster University',
     'Sep 2021 - Apr 2025',
-    '3.9/4.0 GPA',
+    '3rd year student with 3.9/4.0 GPA',
     getDay('9/1/2021')
   ),
   song(
     'Varsity Rower',
     'McMaster University Rowing Club',
     'Aug 2021 - Present',
-    'Open weight 4+ and 2x',
+    "Open Mens' 4+ and 2x",
     getDay('8/20/2021')
   ),
   song(
     'Full-Stack Web Developer',
-    'The Odin Project',
+    'Self-Taught',
     'Dec 2022 - Present',
-    'React + NodeJS/Express',
+    'JS, TS, HTML, CSS, React, Node, Express, SQL, MongoDB',
     getDay('12/1/2022')
   ),
   song(
     'Canada Top #150 osu! Player',
     'osu!',
     'Jun. 2017 - Present',
-    'Tablet + Keyboard',
+    'Tablet and Keyboard',
     getDay('7/18/2017')
   ),
   song(
-    'Support Main in Lost Ark',
+    'Best Support in Lost Ark',
     'Lost Ark',
     'Feb. 2022 - Present',
-    'Bard best support',
+    'Radiant support always',
     getDay('2/11/2022')
   ),
 ];
 
 const skills = [
   song(
-    'Basic Web Skills',
+    'Front-end Development',
     'The Odin Project',
-    'Dec. 2022 - Present',
-    'JavaScript, HTML, CSS'
+    'Dec 2022 - Present',
+    'JS, TS, HTML, CSS, React, Next.js, Tailwind CSS, Webpack',
+    getDay('12/1/2022')
   ),
   song(
-    'Basic Front-end Skills',
+    'Back-end Development',
+    'The Odin Project and McMaster University',
+    'Sep 2022 - Present',
+    'Node.js, Express.js, SQL, MongoDB, Mongoose',
+    getDay('9/1/2022')
+  ),
+  song(
+    'Main Programming Languages',
     'The Odin Project',
-    'Dec. 2022 - onging',
-    'webpack, ReactJS, Vite, NextJS'
+    'Dec 2022 - Present',
+    'JavaScript, TypeScript',
+    getDay('12/1/2022')
   ),
   song(
-    'Basic Back-end Skills',
-    'The Odin Project',
-    'Dec. 2022 - Present',
-    'NodeJS, ExpressJS (+ RESTful APIs)'
-  ),
-  song(
-    'Authentication',
-    'The Odin Project',
-    'Dec. 2022 - Present',
-    'PassportJS, JSON Web Tokens'
-  ),
-  song(
-    'Databases',
-    'The Odin Project + McMaster University',
-    'Jan. 2022 - Present',
-    'SQL, DB2, Relational Algebra, Mongoose, MongoDB Atlas'
-  ),
-  song(
-    'Soft Skills',
+    'Other Programming Languages',
+    'Westdale S.S., McMaster University, and The Odin Project',
     '',
-    '',
-    'Time Management, Communication, Adaptability, Problem-Solving, Teamwork'
-  ),
-  song(
-    'Programming Languages',
-    'High School + McMaster University + Online Courses',
-    '2017 - Present',
-    'C++, C, Java, Python, Haskell, Prolog, Elm'
-  ),
-  song(
-    'Algorithms and Data Structures',
-    'McMaster University',
-    '2nd Year: COMPSCI 2C03 + COMPSCI 2XC3',
-    'Theoretical + Application'
-  ),
-  song(
-    'Design Patterns, Design Principles, SDLC',
-    'McMaster University',
-    '2nd Year: COMPSCI 2ME3',
-    ''
+    'C/C++, Java, Python, Haskell, Elm, Prolog',
+    getDay('9/1/2017')
   ),
 ];
 
@@ -136,14 +110,16 @@ const projects = [
     'McMaster Room Booking',
     'McMaster University',
     '3rd year: COMPSCI 4HC3',
-    'Made room booking for McMaster students easier through HCD'
+    'Make room booking great again',
+    getDay('9/1/2023'),
+    'https://github.com/owengretzinger/room-booking-system'
   ),
   song(
     'Education Data for Change',
     'DeltaHacks IX',
     'Jan. 2023',
     'Built a tool to discover insights into the Ontario education system',
-    undefined,
+    getDay('1/1/2023'),
     'https://github.com/owengretzinger/education-data-for-change'
   ),
   song(
@@ -151,7 +127,7 @@ const projects = [
     'The Odin Project',
     'Sep. 2023',
     'Built a RESTful API for blogs using Express',
-    undefined,
+    getDay('9/1/2023'),
     'https://github.com/geon-youn/blog-api'
   ),
   song(
@@ -159,15 +135,15 @@ const projects = [
     'fast.ai',
     'Feb. 2022 - May. 2022',
     'Kept track of my deep learning journey through a blog',
-    undefined,
+    getDay('2/1/2022'),
     'https://geon-youn.github.io/DunGeon/'
   ),
   song(
     'The Trig Project',
     'McMaster University',
     '1st year: COMPSCI 1XD3',
-    'Helped high school students learn trigonometry by building an app through HCD',
-    undefined,
+    'Trigonometry is now so easy',
+    getDay('1/1/2022'),
     'https://github.com/youcefs21/TheTrigProject'
   ),
 ];
