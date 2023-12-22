@@ -14,16 +14,20 @@ function Play() {
     <Page name="Play">
       <ModeContext.Provider value={modeValue}>
         <div className={styles.darkenBackground}></div>
-        <SongList></SongList>
-        <BottomMenu></BottomMenu>
-        <a
-          className={styles.bottomLeftCookie}
-          href="https://osu.ppy.sh/users/geon"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Cookie></Cookie>
-        </a>
+        <main>
+          <SongList></SongList>
+        </main>
+        <footer className={styles.footer}>
+          <BottomMenu></BottomMenu>
+          <a
+            className={styles.bottomLeftCookie}
+            href="https://osu.ppy.sh/users/geon"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Cookie></Cookie>
+          </a>
+        </footer>
       </ModeContext.Provider>
     </Page>
   );

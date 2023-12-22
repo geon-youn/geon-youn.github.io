@@ -8,7 +8,7 @@ import Mode from './Mode';
 
 function BottomMenu() {
   return (
-    <footer className={styles.bottomMenu}>
+    <div className={styles.bottomMenu}>
       {/* Back button */}
       <div className={styles.backButton}>
         <BackButton></BackButton>
@@ -35,7 +35,7 @@ function BottomMenu() {
           GitHub
         </a>
       </div>
-    </footer>
+    </div>
   );
 }
 

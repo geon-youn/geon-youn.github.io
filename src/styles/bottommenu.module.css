@@ -1,7 +1,5 @@
 .bottomMenu
 {
-  position: fixed;
-  bottom: 0;
   width: 100%;
   height: min(11vw, 11vh);
   background-color: black;
