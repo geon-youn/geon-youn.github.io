@@ -133,7 +133,7 @@ function SongList() {
     >
       {/* Display each song in the songlist */}
       {songList.map((song, i) => {
-        const bell = bellCurve(Math.round(currentSong - i));
+        const bell = bellCurve(Math.round(Math.abs(currentSong - i)));
         const current = Math.round(currentSong) === i;
         return (
           <Song
@@ -144,6 +144,7 @@ function SongList() {
               color: current ? 'black' : `white`,
               backgroundColor: current ? '#f1f1f1' : '#e36808',
               margin: current ? 'min(2vw, 2vh) 0' : `max(-1vw, -1vh) 0`,
+              zIndex: Math.round(bell * 10),
             }}
             song={song}
             focused={current}
