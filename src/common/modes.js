@@ -93,7 +93,7 @@ const skills = [
         'Mobile Development',
         '',
         'Jan 2024 - Present',
-        'Expo',
+        'Expo, React Native',
         getDay('1/1/2024')
     ),
     song(
