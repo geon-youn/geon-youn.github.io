@@ -9,43 +9,43 @@ import Cookie from './Cookie';
 import { useState } from 'react';
 
 function LinkedCookie() {
-  const [expand, setExpand] = useState(false);
+    const [expand, setExpand] = useState(false);
 
-  function toggleExpand() {
-    setExpand((expand) => !expand);
-  }
+    function toggleExpand() {
+        setExpand((expand) => !expand);
+    }
 
-  // When expand is false, adds another class of the same name with Hidden added to the end
-  function toggleHidden(name) {
-    return `${styles[name]}${expand ? '' : ' ' + styles[name + 'Hidden']}`;
-  }
+    // When expand is false, adds another class of the same name with Hidden added to the end
+    function toggleHidden(name) {
+        return `${styles[name]}${expand ? '' : ' ' + styles[name + 'Hidden']}`;
+    }
 
-  return (
-    <div className={styles.linkedCookie}>
-      {/* Click the cookie to toggle the links */}
-      <Cookie onClick={toggleExpand}></Cookie>
-      {/* Only show the links when expanded */}
-      <div className={toggleHidden('cookieLinksContainer')}>
-        <div className={toggleHidden('cookieLinks')}>
-          {links.map((i) => {
-            return (
-              <a
-                key={i.text}
-                {...i.data}
-                className={styles.cookieLink}
-                onClick={i.text === 'Back' ? toggleExpand : null}
-              >
-                <div className={styles.cookieLinkText}>{i.text}</div>
-                <div className={styles.cookieLinkIcon}>
-                  <Icon path={i.path} size={`min(5vw, 5vh)`} />
+    return (
+        <div className={styles.linkedCookie}>
+            {/* Click the cookie to toggle the links */}
+            <Cookie onClick={toggleExpand}></Cookie>
+            {/* Only show the links when expanded */}
+            <div className={toggleHidden('cookieLinksContainer')}>
+                <div className={toggleHidden('cookieLinks')}>
+                    {links.map((i) => {
+                        return (
+                            <a
+                                key={i.text}
+                                {...i.data}
+                                className={styles.cookieLink}
+                                onClick={i.text === 'Back' ? toggleExpand : null}
+                            >
+                                <div className={styles.cookieLinkText}>{i.text}</div>
+                                <div className={styles.cookieLinkIcon}>
+                                    <Icon path={i.path} size={`min(5vw, 5vh)`} />
+                                </div>
+                            </a>
+                        );
+                    })}
                 </div>
-              </a>
-            );
-          })}
+            </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 }
 
 export default LinkedCookie;

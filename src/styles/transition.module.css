@@ -1,94 +1,101 @@
 :root {
-  --size: min(25vh, 25vw);
-  --half: calc(var(--size) / 2);
-  --duration: 1.5s;
-  --end-size: calc(var(--size) * 2);
-  --end-half: calc(var(--end-size) / 2);
+    --size: min(25vh, 25vw);
+    --half: calc(var(--size) / 2);
+    --duration: 1.5s;
+    --end-size: calc(var(--size) * 2);
+    --end-half: calc(var(--end-size) / 2);
 }
 
 .transition {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  user-select: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    user-select: none;
 }
 
 .blur {
-  width: 100vw;
-  height: 100vh;
-  backdrop-filter: blur(min(5vw, 5vh));
-  background-color: rgba(0, 0, 0, 0.8);
-  animation: forwards fade var(--duration);
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(min(5vw, 5vh));
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: forwards fade var(--duration);
 }
 
 .homeTransition {
-  position: fixed;
-  animation-name: rollIn;
-  animation-duration: var(--duration);
-  animation-fill-mode: forwards;
-  width: var(--size);
-  top: calc(50vh - var(--half));
+    position: fixed;
+    animation-name: rollIn;
+    animation-duration: var(--duration);
+    animation-fill-mode: forwards;
+    width: var(--size);
+    top: calc(50vh - var(--half));
 }
 
 .contactTransition {
-  position: fixed;
-  animation-name: popUp;
-  animation-duration: var(--duration);
-  animation-fill-mode: forwards;
-  width: var(--size);
-  top: calc(50vh - var(--half));
-  left: calc(50vw - var(--half));
+    position: fixed;
+    animation-name: popUp;
+    animation-duration: var(--duration);
+    animation-fill-mode: forwards;
+    width: var(--size);
+    top: calc(50vh - var(--half));
+    left: calc(50vw - var(--half));
 }
 
 @keyframes fade {
-  from {
-    opacity: 1;
-  }
-  75% {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+    from {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
 }
 
 @keyframes rollIn {
-  from {
-    left: calc(-3 * var(--size));
-    transform: rotate(0);
-  }
-  75% {
-    top: calc(50vh - var(--half));
-    left: calc(50vw - var(--half));
-    transform: rotate(720deg);
-    width: var(--size);
-    opacity: 1;
-  }
-  to {
-    top: calc(50vh - var(--end-half));
-    left: calc(50vw - var(--end-half));
-    width: var(--end-size);
-    transform: rotate(720deg);
-    opacity: 0;
-  }
+    from {
+        left: calc(-3 * var(--size));
+        transform: rotate(0);
+    }
+
+    75% {
+        top: calc(50vh - var(--half));
+        left: calc(50vw - var(--half));
+        transform: rotate(720deg);
+        width: var(--size);
+        opacity: 1;
+    }
+
+    to {
+        top: calc(50vh - var(--end-half));
+        left: calc(50vw - var(--end-half));
+        width: var(--end-size);
+        transform: rotate(720deg);
+        opacity: 0;
+    }
 }
 
 @keyframes popUp {
-  from {
-    top: 100vh;
-    transform: scale(0);
-  }
-  35% {
-    top: calc(50vh - var(--half));
-    transform: scale(1);
-  }
-  65% {
-    top: calc(50vh - var(--half));
-    transform: scale(1);
-  }
-  to {
-    top: 100vh;
-    transform: scale(0);
-  }
+    from {
+        top: 100vh;
+        transform: scale(0);
+    }
+
+    35% {
+        top: calc(50vh - var(--half));
+        transform: scale(1);
+    }
+
+    65% {
+        top: calc(50vh - var(--half));
+        transform: scale(1);
+    }
+
+    to {
+        top: 100vh;
+        transform: scale(0);
+    }
 }

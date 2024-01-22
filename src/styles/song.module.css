@@ -1,40 +1,40 @@
 .song {
-  flex: none;
-  width: min(80vw, 80vh);
-  height: min(13vw, 13vh);
-  transition: 0.4s;
-  box-sizing: border-box;
-  border: solid min(0.1vw, 0.1vh) black;
-  box-shadow: 0 0 min(3vw, 3vh) rgba(0, 0, 0, 0.5);
-  text-decoration: none;
+    flex: none;
+    width: min(80vw, 80vh);
+    height: min(13vw, 13vh);
+    transition: 0.4s;
+    box-sizing: border-box;
+    border: solid min(0.1vw, 0.1vh) black;
+    box-shadow: 0 0 min(3vw, 3vh) rgba(0, 0, 0, 0.5);
+    text-decoration: none;
 }
 
 .songDetails {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  box-sizing: border-box;
-  padding-left: min(2vw, 2vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: min(2vw, 2vh);
 }
 
 .songTitle {
-  font-size: min(3vw, 3vh);
+    font-size: min(3vw, 3vh);
 }
 
 .songAuthors,
 .songDifficulty {
-  font-size: min(2vw, 2vh);
+    font-size: min(2vw, 2vh);
 }
 
 .songDifficulty {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .songStars {
-  display: flex;
-  align-items: center;
-  width: 40%;
-  gap: min(1vw, 1vh);
+    display: flex;
+    align-items: center;
+    width: 40%;
+    gap: min(1vw, 1vh);
 }

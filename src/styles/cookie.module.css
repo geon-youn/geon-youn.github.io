@@ -1,59 +1,61 @@
 .cookie {
-  position: relative;
-  top: 0;
-  left: 0;
-  border-radius: 50%;
-  transition: 0.2s;
-  z-index: 1;
+    position: relative;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    transition: 0.2s;
+    z-index: 1;
 }
 
 .cookie:hover {
-  transform: scale(1.05);
-  transition: 0.2s;
+    transform: scale(1.05);
+    transition: 0.2s;
 }
 
 .cookie:active {
-  transform: scale(0.95);
-  transition: 0.1s;
+    transform: scale(0.95);
+    transition: 0.1s;
 }
 
 .cookieMain {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: min(50vw, 50vh);
-  z-index: 2;
-  border-radius: 50%;
-  animation: pulse infinite;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: min(50vw, 50vh);
+    z-index: 2;
+    border-radius: 50%;
+    animation: pulse infinite;
 }
 
 .cookieGhost {
-  width: min(50vw, 50vh);
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 50%;
-  animation: ghostPulse infinite;
-  z-index: 3;
-  pointer-events: none;
+    width: min(50vw, 50vh);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    animation: ghostPulse infinite;
+    z-index: 3;
+    pointer-events: none;
 }
 
 @keyframes pulse {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.02);
-  }
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.02);
+    }
 }
 
 @keyframes ghostPulse {
-  from {
-    transform: scale(1);
-    opacity: 0.5;
-  }
-  to {
-    transform: scale(1.04);
-    opacity: 0.2;
-  }
+    from {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: scale(1.04);
+        opacity: 0.2;
+    }
 }
