@@ -79,7 +79,7 @@ const skills = [
         'Front-end Development',
         'The Odin Project',
         'Dec 2022 - Present',
-        'JS, TS, HTML, CSS, React, Next.js, Tailwind CSS, Webpack',
+        'HTML, CSS, React, Next.js, Tailwind CSS, Webpack',
         getDay('12/1/2022')
     ),
     song(
