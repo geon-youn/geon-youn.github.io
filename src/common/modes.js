@@ -90,6 +90,13 @@ const skills = [
         getDay('9/1/2022')
     ),
     song(
+        'Mobile Development',
+        '',
+        'Jan 2024 - Present',
+        'Expo',
+        getDay('1/1/2024')
+    ),
+    song(
         'Main Programming Languages',
         'The Odin Project',
         'Dec 2022 - Present',
