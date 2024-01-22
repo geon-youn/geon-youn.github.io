@@ -69,7 +69,7 @@ const about = [
         'Best Support in Lost Ark',
         'Lost Ark',
         'Feb. 2022 - Present',
-        'Radiant support always',
+        'Always Radiant Support (discord is geonowo if you wanna play)',
         getDay('2/11/2022')
     ),
 ];
