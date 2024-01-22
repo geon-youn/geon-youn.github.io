@@ -118,7 +118,7 @@ const projects = [
         'DeltaHacks X',
         'Jan. 2024',
         'Audio journal to help you destress! Won Best Health Hack!!',
-        getDay('1/1/2023'),
+        getDay('1/1/2024'),
         'https://devpost.com/software/dinomind'
     ),
     song(
