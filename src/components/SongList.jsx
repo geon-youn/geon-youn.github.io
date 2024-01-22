@@ -90,9 +90,9 @@ function SongList() {
         (e) => {
             const roundedCurrentSong = Math.round(currentSong);
             const delta =
-                e.key === 'ArrowDown' || e.key === 'ArrowRight'
+                ['ArrowDown', 'ArrowRight', 'j', 'l'].includes(e.key)
                     ? 1
-                    : e.key === 'ArrowUp' || e.key === 'ArrowLeft'
+                    : ['ArrowUp', 'ArrowLeft', 'h', 'k'].includes(e.key)
                         ? -1
                         : 0;
             setCurrentSong(() => returnNewSong(roundedCurrentSong, delta));
