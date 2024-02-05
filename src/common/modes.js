@@ -40,7 +40,7 @@ const about = [
     song(
         'BASc in Honours Computer Science (Co-op)',
         'McMaster University',
-        'Sep 2021 - Apr 2025',
+        'Sep 2021 - Present',
         '3rd year student with 3.9/4.0 GPA',
         getDay('9/1/2021')
     ),
@@ -50,6 +50,13 @@ const about = [
         'Aug 2021 - Present',
         "Open Mens' 4+ and 2x",
         getDay('8/20/2021')
+    ),
+    song(
+        'High School Rower',
+        'Westdale Secondary School',
+        'Nov 2017 - Mar 2020',
+        "Open Mens' 4+ and 4x",
+        getDay('11/1/2017')
     ),
     song(
         'Full-Stack Web Developer',
