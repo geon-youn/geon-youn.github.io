@@ -114,6 +114,14 @@ const skills = [
 
 const projects = [
     song(
+        'EcoDex',
+        'GDSC McMasterU Solution Challenge Hackathon 2024',
+        'Feb. 2024',
+        'Learn about your local biodiversity! Won the Protection of Nature challenge!!',
+        getDay('2/4/2024'),
+        'https://devpost.com/software/ecodex-0wngoj'
+    ),
+    song(
         'DinoMind',
         'DeltaHacks X',
         'Jan. 2024',
