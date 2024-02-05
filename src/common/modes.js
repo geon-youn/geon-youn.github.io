@@ -53,7 +53,7 @@ const about = [
     ),
     song(
         'High School Rower',
-        'Westdale Secondary School',
+        'Westdale Secondary School Rowing Club',
         'Nov 2017 - Mar 2020',
         "Open Mens' 4+ and 4x",
         getDay('11/1/2017')
@@ -73,10 +73,10 @@ const about = [
         getDay('7/18/2017')
     ),
     song(
-        'Best Support in Lost Ark',
+        'Radiant Support',
         'Lost Ark',
         'Feb. 2022 - Present',
-        'Always Radiant Support (discord is geonowo if you wanna play)',
+        'Artist and Bard main with YHAP30, LWC30, MOS30',
         getDay('2/11/2022')
     ),
 ];
