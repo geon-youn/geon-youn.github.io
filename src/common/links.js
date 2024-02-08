@@ -19,7 +19,7 @@ const linkItem = (href, text, path, newTab = false) => {
 const links = [
     linkItem('/#/play', 'Play', mdiChevronRight),
     linkItem(
-        'https://docs.google.com/document/d/e/2PACX-1vQFV6c-u7EdKpflNq2J3G81tS9NA2pl8Kc8joDH7SxUCuKj91SxbjiCMM3XGhGLm-ZePBEt5NmU2gZ6/pub',
+        'https://docs.google.com/document/d/1oj3gwQFQCw2CRM2pgIgZyZ4mBGCKxn1wisiEh8ku7NI/edit?usp=sharing',
         'Resume',
         mdiScriptText,
         true
