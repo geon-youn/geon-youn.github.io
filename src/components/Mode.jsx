@@ -43,7 +43,9 @@ function Mode() {
                     setExpand((e) => !e);
                 }}
                 style={
-                    expand ? { backgroundColor: 'rgba(255, 255, 255, 0.05)' } : null
+                    expand
+                        ? { backgroundColor: 'rgba(255, 255, 255, 0.05)' }
+                        : null
                 }
             >
                 <Icon

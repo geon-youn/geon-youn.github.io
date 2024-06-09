@@ -11,7 +11,7 @@ const linkItem = (href, text, path, newTab = false) => {
     return {
         data: { href, ...newTabProps },
         text,
-        path,
+        path
     };
 };
 
@@ -25,7 +25,7 @@ const links = [
         true
     ),
     linkItem('https://github.com/geon-youn', 'GitHub', gitHub, true),
-    linkItem(null, 'Back', mdiChevronLeft),
+    linkItem(null, 'Back', mdiChevronLeft)
 ];
 
 export default links;

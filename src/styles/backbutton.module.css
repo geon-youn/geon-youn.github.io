@@ -14,7 +14,7 @@
     transition: 0.25s;
 }
 
-.left>svg {
+.left > svg {
     width: min(2vw, 2vh);
 }
 
@@ -44,6 +44,6 @@
     transform: skewX(-10deg) translateX(max(-2vw, -2vh));
 }
 
-.right>div {
+.right > div {
     transform: skewX(10deg);
 }

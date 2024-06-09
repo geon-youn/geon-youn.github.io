@@ -7,8 +7,7 @@ import styles from '../styles/backbutton.module.css';
 // White left arrow svg
 function LeftArrow() {
     const style = {
-        filter:
-            'invert(100%) sepia(100%) saturate(0%) hue-rotate(39deg) brightness(107%) contrast(101%)',
+        filter: 'invert(100%) sepia(100%) saturate(0%) hue-rotate(39deg) brightness(107%) contrast(101%)'
     };
     return (
         <svg

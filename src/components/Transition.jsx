@@ -11,8 +11,8 @@ const transitions = {
     logo: {
         className: styles.homeTransition,
         src: '/img/icon.png',
-        alt: 'Geon osu! logo',
-    },
+        alt: 'Geon osu! logo'
+    }
 };
 
 function Transition({ home, type = 'logo' }) {

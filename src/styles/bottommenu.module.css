@@ -25,7 +25,10 @@
 
 .linkedInButton,
 .gitHubButton {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.35), rgba(0, 0, 0, 0));
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.35),
+        rgba(0, 0, 0, 0)
+    );
     height: 100%;
     width: min(9.5vw, 9.5vh);
     color: white;

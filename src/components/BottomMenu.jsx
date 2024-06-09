@@ -22,7 +22,7 @@ function BottomMenu() {
                     className={styles.linkedInButton}
                     href="https://www.linkedin.com/in/geon-youn/"
                     target="_blank"
-                    rel='noreferrer'
+                    rel="noreferrer"
                 >
                     LinkedIn
                 </a>
@@ -30,7 +30,7 @@ function BottomMenu() {
                     className={styles.gitHubButton}
                     href="https://github.com/geon-youn/geon-youn.github.io"
                     target="_blank"
-                    rel='noreferrer'
+                    rel="noreferrer"
                 >
                     GitHub
                 </a>

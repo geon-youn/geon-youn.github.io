@@ -1,5 +1,8 @@
 .modeParent {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.35), rgba(0, 0, 0, 0));
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.35),
+        rgba(0, 0, 0, 0)
+    );
     height: 100%;
     width: min(11vw, 11vh);
     color: white;
@@ -52,7 +55,7 @@
     padding: min(0.5vw, 0.5vh);
 }
 
-.mode>svg {
+.mode > svg {
     min-width: min(12vw, 12vh);
 }
 

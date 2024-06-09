@@ -6,7 +6,7 @@ import { createContext } from 'react';
 
 const ModeContext = createContext({
     mode: 0,
-    setMode: () => { },
+    setMode: () => {}
 });
 
-export default ModeContext
+export default ModeContext;

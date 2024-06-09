@@ -77,7 +77,9 @@ function SongList() {
 
             if (prevTouch) {
                 const delta = (prevTouch.pageY - touch.pageY) * 0.01;
-                setCurrentSong((currentSong) => returnNewSong(currentSong, delta));
+                setCurrentSong((currentSong) =>
+                    returnNewSong(currentSong, delta)
+                );
             }
 
             setPrevTouch(() => touch);
@@ -89,12 +91,11 @@ function SongList() {
     const handleKey = useCallback(
         (e) => {
             const roundedCurrentSong = Math.round(currentSong);
-            const delta =
-                ['ArrowDown', 'ArrowRight', 'j', 'l'].includes(e.key)
-                    ? 1
-                    : ['ArrowUp', 'ArrowLeft', 'h', 'k'].includes(e.key)
-                        ? -1
-                        : 0;
+            const delta = ['ArrowDown', 'ArrowRight', 'j', 'l'].includes(e.key)
+                ? 1
+                : ['ArrowUp', 'ArrowLeft', 'h', 'k'].includes(e.key)
+                  ? -1
+                  : 0;
             setCurrentSong(() => returnNewSong(roundedCurrentSong, delta));
         },
         [returnNewSong, currentSong]
@@ -114,8 +115,9 @@ function SongList() {
             // Move the songlist depending on the currently focused song
             // Keep the focused song vertically centered in the screen
             style={{
-                transform: `translateY(calc(50% - min(7vw, 7vh) - min(${12 * currentSong
-                    }vw, ${12 * currentSong}vh)))`,
+                transform: `translateY(calc(50% - min(7vw, 7vh) - min(${
+                    12 * currentSong
+                }vw, ${12 * currentSong}vh)))`
             }}
             // Events to set being able to drag the songlist
             onMouseDown={() => setDrag(true)}
@@ -142,8 +144,10 @@ function SongList() {
                             transform: `translateX(${-bell * (current ? 5 : 2) + 5}vw)`,
                             color: current ? 'black' : `white`,
                             backgroundColor: current ? '#f1f1f1' : '#e36808',
-                            margin: current ? 'min(2vw, 2vh) 0' : `max(-1vw, -1vh) 0`,
-                            zIndex: Math.round(Math.log(bell * 1000)),
+                            margin: current
+                                ? 'min(2vw, 2vh) 0'
+                                : `max(-1vw, -1vh) 0`,
+                            zIndex: Math.round(Math.log(bell * 1000))
                         }}
                         song={song}
                         focused={current}

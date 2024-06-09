@@ -2,21 +2,21 @@
 
 Welcome to [my website](https://geon-youn.github.io/), which basically copies the style of osu!'s main menu and song selection screen :P.
 
-Since the website is hosted through GitHub Pages, I used hash routing. 
+Since the website is hosted through GitHub Pages, I used hash routing.
 
-## Home Page 
+## Home Page
 
-The home page displays the osu! logo with "osu" replaced by "geon" and recoloured orange. It beats at 120 bpm. 
+The home page displays the osu! logo with "osu" replaced by "geon" and recoloured orange. It beats at 120 bpm.
 
-When you click on the logo, it expands to show different links: the play page, my resume, my GitHub, and closing the logo. 
+When you click on the logo, it expands to show different links: the play page, my resume, my GitHub, and closing the logo.
 
 ## Play Page (i.e. song selection)
 
-Broken into 3 modes so far, which shows different "songs" depending on the mode. 
+Broken into 3 modes so far, which shows different "songs" depending on the mode.
 
 When you click on the logo in the bottom right corner, it will take you to my osu! page.
 
-Clicking on "LinkedIn" takes you to my LinkedIn page and clicking on "GitHub" takes you to this repo. 
+Clicking on "LinkedIn" takes you to my LinkedIn page and clicking on "GitHub" takes you to this repo.
 
 ### geon! (About Me)
 

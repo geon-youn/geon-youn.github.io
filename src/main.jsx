@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom/client';
 import { createHashRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/Home';
 import Play from './pages/Play';
-import './styles/main.css'
+import './styles/main.css';
 
 const router = createHashRouter([
     {
         path: '/',
-        element: <Home />,
+        element: <Home />
     },
     {
         path: '/play',

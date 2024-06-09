@@ -11,7 +11,12 @@
 }
 
 .cookieLinksContainer {
-    clip-path: polygon(max(-13vw, -13vh) 0, 100% 0, 100% 100%, max(-13vw, -13vh) 100%);
+    clip-path: polygon(
+        max(-13vw, -13vh) 0,
+        100% 0,
+        100% 100%,
+        max(-13vw, -13vh) 100%
+    );
     width: min(50vw, 50vh);
     transition: var(--cookie-transition);
 }
@@ -43,7 +48,12 @@
     justify-content: space-between;
     box-sizing: border-box;
     height: min(6.5vw, 6.5vh);
-    background-image: linear-gradient(to right, #00000028, #00000062, #00000093);
+    background-image: linear-gradient(
+        to right,
+        #00000028,
+        #00000062,
+        #00000093
+    );
     background-color: #f59e73cc;
     text-decoration: none;
     width: calc(100% + min(13vw, 13vh));
@@ -70,5 +80,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    filter: drop-shadow(0 min(0.2vw, 0.2vh) min(0.3vw, 0.3vh) rgba(0, 0, 0, 0.445));
+    filter: drop-shadow(
+        0 min(0.2vw, 0.2vh) min(0.3vw, 0.3vh) rgba(0, 0, 0, 0.445)
+    );
 }

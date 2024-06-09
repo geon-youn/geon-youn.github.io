@@ -33,11 +33,18 @@ function LinkedCookie() {
                                 key={i.text}
                                 {...i.data}
                                 className={styles.cookieLink}
-                                onClick={i.text === 'Back' ? toggleExpand : null}
+                                onClick={
+                                    i.text === 'Back' ? toggleExpand : null
+                                }
                             >
-                                <div className={styles.cookieLinkText}>{i.text}</div>
+                                <div className={styles.cookieLinkText}>
+                                    {i.text}
+                                </div>
                                 <div className={styles.cookieLinkIcon}>
-                                    <Icon path={i.path} size={`min(5vw, 5vh)`} />
+                                    <Icon
+                                        path={i.path}
+                                        size={`min(5vw, 5vh)`}
+                                    />
                                 </div>
                             </a>
                         );
