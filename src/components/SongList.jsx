@@ -143,7 +143,7 @@ function SongList() {
                             color: current ? 'black' : `white`,
                             backgroundColor: current ? '#f1f1f1' : '#e36808',
                             margin: current ? 'min(2vw, 2vh) 0' : `max(-1vw, -1vh) 0`,
-                            zIndex: Math.round(bell * 10),
+                            zIndex: Math.round(Math.log(bell * 1000)),
                         }}
                         song={song}
                         focused={current}
