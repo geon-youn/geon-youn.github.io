@@ -41,86 +41,72 @@ const about = [
         'BASc in Honours Computer Science (Co-op)',
         'McMaster University',
         'Sep 2021 - Present',
-        '3rd year student with 3.9/4.0 GPA',
+        'Going into 4th year after co-op with 11.7/12 CGPA',
         getDay('9/1/2021')
     ),
     song(
         'Web Applications Developer - Intern',
         'Evertz',
         'May 2024 - Present',
-        'TypeScript, GraphQL, MongoDB, Jest',
+        'TS/JS, GraphQL, MongoDB, Jest, Git, Less, Jira',
         getDay('5/7/2024')
     ),
     song(
         'Varsity Rower',
-        'Leander Boat Club (Westdale SS and McMaster U)',
+        'Leander Boat Club (Westdale and McMaster)',
         'Nov 2017 - Present',
         "Open Mens' 4+ and 2x",
         getDay('11/1/2017')
     ),
     song(
-        'Decay farming osu! Player',
+        'Peaked #1798 Global',
         'osu!',
         'Jun 2017 - Present',
-        'Not farming PP at the moment :P',
+        '',
         getDay('7/18/2017')
     ),
     song(
-        'Support LF G4 HM Thaemine Prog T.T',
+        'Support Main',
         'Lost Ark',
         'Feb 2022 - Present',
-        '1630 Artist main and 1620 WF Aero alt',
+        'Pump deeps!',
         getDay('2/11/2022')
-    ),
-    song(
-        'Soon to be support main in Korean Mushroom Game',
-        'MapleStory',
-        'Too long ago - Present',
-        '245 Blaster and 244 Kanna CRA mules ;-;',
-        getDay('7/21/2010')
     )
 ];
 
 const skills = [
     song(
-        'Skills with work experience',
-        'Evertz',
-        'May 2024 - Present',
-        'TypeScript, MongoDB, GraphQL, Jest, Git, Gitea, Jira',
-        getDay('5/7/2024')
-    ),
-    song(
         'Front-end Development',
-        'The Odin Project',
+        'The Odin Project, McMaster, and Co-op',
         'Dec 2022 - Present',
-        'HTML, CSS, React, Next.js, Tailwind CSS, Webpack',
+        'HTML, CSS, React, Next.js, Tailwind CSS, Less CSS, Webpack, RMWC',
         getDay('12/1/2022')
     ),
     song(
         'Back-end Development',
-        'The Odin Project and McMaster University',
+        'The Odin Project, McMaster, and Co-op',
         'Sep 2022 - Present',
-        'Node.js, Express.js, SQL, MongoDB, Mongoose',
+        'Node.js, Express.js, SQL, MongoDB, Mongoose, GraphQL, Redux/Ducks',
         getDay('9/1/2022')
     ),
     song(
         'Mobile Development',
-        '',
+        'Hackathons',
         'Jan 2024 - Present',
         'Expo, React Native',
         getDay('1/1/2024')
     ),
     song(
-        'Main Programming Languages',
-        'The Odin Project',
+        'Highly Proficient PLs',
+        'The Odin Project, Hackathons, Co-op',
         'Dec 2022 - Present',
         'JavaScript, TypeScript',
         getDay('12/1/2022')
     ),
     song(
-        'Other Programming Languages',
-        'Westdale S.S., McMaster University, and The Odin Project',
-        '',
+        'Familiar PLs',
+        'Westdale, McMaster, and The Odin Project',
+        'Sep 2017 - Present',
         'C/C++, Java, Python, Haskell, Elm, Prolog',
         getDay('9/1/2017')
     )
