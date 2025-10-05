@@ -41,13 +41,20 @@ const about = [
         'BASc in Honours Computer Science (Co-op)',
         'McMaster University',
         'Sep 2021 - Present',
-        'Going into 4th year after co-op with 11.7/12 CGPA',
+        '5th year student with 11.7/12 CGPA',
         getDay('9/1/2021')
+    ),
+    song(
+        'Teaching Assistant',
+        'McMaster University',
+        'Sep 2025 - Dec 2025',
+        'Leading labs for operating systems',
+        getDay('9/1/2024')
     ),
     song(
         'Web Applications Developer - Intern',
         'Evertz',
-        'May 2024 - Present',
+        'May 2024 - Aug 2025',
         'TS/JS, GraphQL, MongoDB, Jest, Git, Less, Jira',
         getDay('5/7/2024')
     ),

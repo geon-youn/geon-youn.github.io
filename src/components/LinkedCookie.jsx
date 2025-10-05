@@ -9,7 +9,7 @@ import Cookie from './Cookie';
 import { useState } from 'react';
 
 function LinkedCookie() {
-    const [expand, setExpand] = useState(false);
+    const [expand, setExpand] = useState(true);
 
     function toggleExpand() {
         setExpand((expand) => !expand);
@@ -34,7 +34,7 @@ function LinkedCookie() {
                                 {...i.data}
                                 className={styles.cookieLink}
                                 onClick={
-                                    i.text === 'Back' ? toggleExpand : null
+                                    i.text === 'Close' ? toggleExpand : null
                                 }
                             >
                                 <div className={styles.cookieLinkText}>

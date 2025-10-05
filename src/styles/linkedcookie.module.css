@@ -60,6 +60,7 @@
     padding-left: min(20vw, 20vh);
     padding-right: min(10vw, 10vh);
     transition: 0.2s;
+    cursor: pointer;
 }
 
 .cookieLink:hover {

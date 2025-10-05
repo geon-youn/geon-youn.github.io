@@ -25,7 +25,7 @@ const links = [
         true
     ),
     linkItem('https://github.com/geon-youn', 'GitHub', gitHub, true),
-    linkItem(null, 'Back', mdiChevronLeft)
+    linkItem(null, 'Close', mdiChevronLeft)
 ];
 
 export default links;
