@@ -8,7 +8,7 @@ To start the project, run `npm run dev`. To publish changes to GitHub pages, run
 
 ## Home Page
 
-The home page displays the osu! logo with "osu" replaced by "geon" and recoloured orange. 
+The home page displays the osu! logo with "osu" replaced by "geon" and recoloured orange.
 
 When you click on the logo, it expands to show different links: the play page, my resume, my GitHub, and closing the logo.
 
@@ -30,6 +30,6 @@ Each song lists some of my skills.
 
 ### geon!projects (My Projects)
 
-Each song lists one of the projects I worked on. 
+Each song lists one of the projects I worked on.
 
 If there's a repo to it, clicking on the song will open its repo in a new tab.

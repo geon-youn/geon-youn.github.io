@@ -12,13 +12,13 @@ function bellCurve(x) {
 function debounce(f, delay) {
     let timeout;
 
-    return function(...args) {
+    return function (...args) {
         const context = this;
         clearTimeout(timeout);
         timeout = setTimeout(() => {
             f.apply(context, args);
         }, delay);
-    }
+    };
 }
 
 function SongList() {
@@ -30,7 +30,7 @@ function SongList() {
 
     // Reset to 0 when mode is changed
     useEffect(() => {
-        setCurrentSong(0)
+        setCurrentSong(0);
     }, [mode]);
 
     // Function to update current song by a certain amount
@@ -42,16 +42,20 @@ function SongList() {
     );
 
     // Periodically round currentSong and keep it within bounds
-    const bindCurrentSong = useMemo(() => debounce(() => {
-        setCurrentSong((currentSong) => {
-            if (currentSong < 0) {
-                return 0;
-            } else if (currentSong > songList.length - 1) {
-                return songList.length - 1;
-            }
-            return Math.round(currentSong);
-        });
-    }, 250), [songList.length]);
+    const bindCurrentSong = useMemo(
+        () =>
+            debounce(() => {
+                setCurrentSong((currentSong) => {
+                    if (currentSong < 0) {
+                        return 0;
+                    } else if (currentSong > songList.length - 1) {
+                        return songList.length - 1;
+                    }
+                    return Math.round(currentSong);
+                });
+            }, 250),
+        [songList.length]
+    );
 
     useEffect(() => {
         bindCurrentSong();
