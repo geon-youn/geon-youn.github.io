@@ -38,7 +38,7 @@ const song = (title, author, mapper, difficulty, startDate, href) => {
 
 const about = [
     song(
-        'BASc in Honours Computer Science (Co-op)',
+        'B.A.Sc. in Honours Computer Science (Co-op)',
         'McMaster University',
         'Sep 2021 - Present',
         '5th year student with 11.7/12 CGPA',

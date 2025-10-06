@@ -9,12 +9,29 @@ function bellCurve(x) {
     return Math.exp(Math.pow(x, 2) / -2);
 }
 
+function debounce(f, delay) {
+    let timeout;
+
+    return function(...args) {
+        const context = this;
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+            f.apply(context, args);
+        }, delay);
+    }
+}
+
 function SongList() {
     const { mode } = useContext(ModeContext);
     const [currentSong, setCurrentSong] = useState(0);
     const [drag, setDrag] = useState(false);
     const [prevTouch, setPrevTouch] = useState(null);
-    const songList = modesData[mode];
+    const songList = useMemo(() => modesData[mode], [mode]);
+
+    // Reset to 0 when mode is changed
+    useEffect(() => {
+        setCurrentSong(0)
+    }, [mode]);
 
     // Function to update current song by a certain amount
     const returnNewSong = useMemo(
@@ -25,24 +42,20 @@ function SongList() {
     );
 
     // Periodically round currentSong and keep it within bounds
-    useEffect(() => {
-        const key = setInterval(
-            () =>
-                setCurrentSong((currentSong) => {
-                    if (currentSong < 0) {
-                        return 0;
-                    } else if (currentSong > songList.length - 1) {
-                        return songList.length - 1;
-                    }
-                    return Math.round(currentSong);
-                }),
-            1000
-        );
+    const bindCurrentSong = useMemo(() => debounce(() => {
+        setCurrentSong((currentSong) => {
+            if (currentSong < 0) {
+                return 0;
+            } else if (currentSong > songList.length - 1) {
+                return songList.length - 1;
+            }
+            return Math.round(currentSong);
+        });
+    }, 250), [songList.length]);
 
-        return () => {
-            clearInterval(key);
-        };
-    }, [songList.length]);
+    useEffect(() => {
+        bindCurrentSong();
+    }, [currentSong]);
 
     // Move songlist through wheel
     const handleWheel = useCallback(
