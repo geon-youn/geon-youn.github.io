@@ -4,8 +4,8 @@
  * Pops up at the start of each new route.
  */
 
-import styles from '../styles/transition.module.css';
-import { useEffect, useState } from 'react';
+import styles from '../styles/transition.module.css'
+import { useEffect, useState } from 'react'
 
 const transitions = {
     logo: {
@@ -13,27 +13,27 @@ const transitions = {
         src: '/img/icon.png',
         alt: 'Geon osu! logo'
     }
-};
+}
 
 function Transition({ home, type = 'logo' }) {
     // hide transition after a few seconds
-    const [showTransition, setShowTransition] = useState(true);
+    const [showTransition, setShowTransition] = useState(true)
 
     useEffect(() => {
         const key = setTimeout(() => {
-            setShowTransition(false);
-        }, 1500);
+            setShowTransition(false)
+        }, 1500)
         return () => {
-            clearTimeout(key);
-        };
-    }, []);
+            clearTimeout(key)
+        }
+    }, [])
 
     // If the page's transition isn't implemented, then ignore the transition
     if (!type || !(type in transitions)) {
-        return null;
+        return null
     }
 
-    const transition = transitions[type];
+    const transition = transitions[type]
 
     return showTransition && !home ? (
         <div className={styles.transition}>
@@ -44,7 +44,7 @@ function Transition({ home, type = 'logo' }) {
                 alt={transition.alt}
             />
         </div>
-    ) : null;
+    ) : null
 }
 
-export default Transition;
+export default Transition

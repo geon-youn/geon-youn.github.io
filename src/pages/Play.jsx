@@ -1,13 +1,13 @@
-import Cookie from '../components/Cookie';
-import BottomMenu from '../components/BottomMenu';
-import styles from '../styles/play.module.css';
-import { useState } from 'react';
-import ModeContext from '../contexts/ModeContext';
-import SongList from '../components/SongList';
+import Cookie from '../components/Cookie'
+import BottomMenu from '../components/BottomMenu'
+import styles from '../styles/play.module.css'
+import { useState } from 'react'
+import ModeContext from '../contexts/ModeContext'
+import SongList from '../components/SongList'
 
 function Play() {
-    const [mode, setMode] = useState(0);
-    const modeValue = { mode, setMode };
+    const [mode, setMode] = useState(0)
+    const modeValue = { mode, setMode }
 
     return (
         <ModeContext.Provider value={modeValue}>
@@ -27,7 +27,7 @@ function Play() {
                 </a>
             </footer>
         </ModeContext.Provider>
-    );
+    )
 }
 
-export default Play;
+export default Play

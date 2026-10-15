@@ -2,12 +2,12 @@
  * Cookie aka the logo for the website
  */
 
-import styles from '../styles/cookie.module.css';
+import styles from '../styles/cookie.module.css'
 
 function Cookie({ onClick, duration = '0.5s' }) {
     const style = {
         animationDuration: duration
-    };
+    }
 
     return (
         <div className={styles.cookie} onClick={onClick}>
@@ -25,7 +25,7 @@ function Cookie({ onClick, duration = '0.5s' }) {
                 alt="Ghost of Geon osu! logo 1"
             />
         </div>
-    );
+    )
 }
 
-export default Cookie;
+export default Cookie

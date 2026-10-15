@@ -2,27 +2,27 @@ import {
     mdiAccount,
     mdiAccountDetails,
     mdiClipboardTextMultiple
-} from '@mdi/js';
+} from '@mdi/js'
 
-import dayjs from 'dayjs';
+import dayjs from 'dayjs'
 
 // Factory to create mode
 const mode = (name, path) => {
     return {
         name,
         path
-    };
-};
+    }
+}
 
 // List of modes for Play
 export const modes = [
     mode('geon!', mdiAccount),
     mode('geon!skills', mdiAccountDetails),
     mode('geon!projects', mdiClipboardTextMultiple)
-];
+]
 
-const today = dayjs();
-const getDay = (date) => dayjs(date, 'MM/DD/YYYY');
+const today = dayjs()
+const getDay = (date) => dayjs(date, 'MM/DD/YYYY')
 
 // Factory to create songs
 const song = (title, author, mapper, difficulty, startDate, href) => {
@@ -33,8 +33,8 @@ const song = (title, author, mapper, difficulty, startDate, href) => {
         difficulty,
         stars: today.diff(getDay(startDate), 'y', true),
         href
-    };
-};
+    }
+}
 
 const about = [
     song(
@@ -79,7 +79,7 @@ const about = [
         'Pump deeps!',
         getDay('2/11/2022')
     )
-];
+]
 
 const skills = [
     song(
@@ -117,7 +117,7 @@ const skills = [
         'C/C++, Java, Python, Haskell, Elm, Prolog',
         getDay('9/1/2017')
     )
-];
+]
 
 const projects = [
     song(
@@ -176,7 +176,7 @@ const projects = [
         getDay('1/1/2022'),
         'https://github.com/youcefs21/TheTrigProject'
     )
-];
+]
 
 // List of songs for each mode (0 = geon!), (1 = geon!skills), (2 = geon!projects)
-export const modesData = [about, skills, projects];
+export const modesData = [about, skills, projects]

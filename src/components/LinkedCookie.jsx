@@ -2,22 +2,22 @@
  * Takes the Cookie and adds links to it that appear when the Cookie is clicked
  */
 
-import links from '../common/links';
-import styles from '../styles/linkedcookie.module.css';
-import Icon from '@mdi/react';
-import Cookie from './Cookie';
-import { useState } from 'react';
+import links from '../common/links'
+import styles from '../styles/linkedcookie.module.css'
+import Icon from '@mdi/react'
+import Cookie from './Cookie'
+import { useState } from 'react'
 
 function LinkedCookie() {
-    const [expand, setExpand] = useState(true);
+    const [expand, setExpand] = useState(true)
 
     function toggleExpand() {
-        setExpand((expand) => !expand);
+        setExpand((expand) => !expand)
     }
 
     // When expand is false, adds another class of the same name with Hidden added to the end
     function toggleHidden(name) {
-        return `${styles[name]}${expand ? '' : ' ' + styles[name + 'Hidden']}`;
+        return `${styles[name]}${expand ? '' : ' ' + styles[name + 'Hidden']}`
     }
 
     return (
@@ -47,12 +47,12 @@ function LinkedCookie() {
                                     />
                                 </div>
                             </a>
-                        );
+                        )
                     })}
                 </div>
             </div>
         </div>
-    );
+    )
 }
 
-export default LinkedCookie;
+export default LinkedCookie

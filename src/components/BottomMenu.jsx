@@ -2,9 +2,9 @@
  * Bottom menu for the Play page
  */
 
-import styles from '../styles/bottommenu.module.css';
-import BackButton from './BackButton';
-import Mode from './Mode';
+import styles from '../styles/bottommenu.module.css'
+import BackButton from './BackButton'
+import Mode from './Mode'
 
 function BottomMenu() {
     return (
@@ -36,7 +36,7 @@ function BottomMenu() {
                 </a>
             </div>
         </div>
-    );
+    )
 }
 
-export default BottomMenu;
+export default BottomMenu

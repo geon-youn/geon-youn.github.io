@@ -2,37 +2,37 @@
  * Mode menu
  */
 
-import ModeContext from '../contexts/ModeContext';
-import styles from '../styles/mode.module.css';
-import Icon from '@mdi/react';
-import { useContext, useState, useEffect, useRef } from 'react';
-import { modes } from '../common/modes';
+import ModeContext from '../contexts/ModeContext'
+import styles from '../styles/mode.module.css'
+import Icon from '@mdi/react'
+import { useContext, useState, useEffect, useRef } from 'react'
+import { modes } from '../common/modes'
 
 // Detects if there's a click outside of the mode menu to close the menu
 function useOutsideMode(ref, setExpandFalse) {
     useEffect(() => {
         const handleOutsideClick = (e) => {
             if (ref.current && !ref.current.contains(e.target)) {
-                setExpandFalse();
+                setExpandFalse()
             }
-        };
+        }
 
-        document.addEventListener('click', handleOutsideClick);
+        document.addEventListener('click', handleOutsideClick)
 
         return () => {
-            document.removeEventListener('click', handleOutsideClick);
-        };
-    }, [ref, setExpandFalse]);
+            document.removeEventListener('click', handleOutsideClick)
+        }
+    }, [ref, setExpandFalse])
 }
 
 function Mode() {
-    const [expand, setExpand] = useState(false);
-    const { mode, setMode } = useContext(ModeContext);
-    const currentMode = modes[mode];
-    const ref = useRef(null);
+    const [expand, setExpand] = useState(false)
+    const { mode, setMode } = useContext(ModeContext)
+    const currentMode = modes[mode]
+    const ref = useRef(null)
     useOutsideMode(ref, () => {
-        setExpand(() => false);
-    });
+        setExpand(() => false)
+    })
 
     return (
         <div className={styles.modeParent} ref={ref}>
@@ -40,7 +40,7 @@ function Mode() {
             <div
                 className={styles.modeButton}
                 onClick={() => {
-                    setExpand((e) => !e);
+                    setExpand((e) => !e)
                 }}
                 style={
                     expand
@@ -63,14 +63,14 @@ function Mode() {
                         .concat(modes)
                         .reverse()
                         .map((mode, idx) => {
-                            const i = modes.length - 1 - idx;
+                            const i = modes.length - 1 - idx
                             return (
                                 <div
                                     className={styles.mode}
                                     key={mode.name}
                                     onClick={() => {
-                                        setMode(() => i);
-                                        setExpand(() => false);
+                                        setMode(() => i)
+                                        setExpand(() => false)
                                     }}
                                 >
                                     <Icon
@@ -80,12 +80,12 @@ function Mode() {
                                     ></Icon>
                                     <div>{mode.name}</div>
                                 </div>
-                            );
+                            )
                         })}
                 </div>
             ) : null}
         </div>
-    );
+    )
 }
 
-export default Mode;
+export default Mode
