@@ -4,7 +4,7 @@
 
 import ModeContext from '../contexts/ModeContext'
 import styles from '../styles/mode.module.css'
-import Icon from '@mdi/react'
+import { Icon } from '@mdi/react'
 import { useContext, useState, useEffect, useRef } from 'react'
 import { modes } from '../common/modes'
 

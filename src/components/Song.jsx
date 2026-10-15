@@ -3,7 +3,7 @@
  */
 
 import styles from '../styles/song.module.css'
-import Icon from '@mdi/react'
+import { Icon } from '@mdi/react'
 import { mdiStar } from '@mdi/js'
 import { useEffect, useState } from 'react'
 

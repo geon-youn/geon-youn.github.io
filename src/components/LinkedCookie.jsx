@@ -4,7 +4,7 @@
 
 import links from '../common/links'
 import styles from '../styles/linkedcookie.module.css'
-import Icon from '@mdi/react'
+import { Icon } from '@mdi/react'
 import Cookie from './Cookie'
 import { useState } from 'react'
 
@@ -27,23 +27,23 @@ function LinkedCookie() {
             {/* Only show the links when expanded */}
             <div className={toggleHidden('cookieLinksContainer')}>
                 <div className={toggleHidden('cookieLinks')}>
-                    {links.map((i) => {
+                    {links.map((link) => {
                         return (
                             <a
-                                key={i.text}
-                                {...i.data}
+                                {...link.data}
+                                key={link.text}
                                 className={styles.cookieLink}
                                 onClick={
-                                    i.text === 'Close' ? toggleExpand : null
+                                    link.text === 'Close' ? toggleExpand : null
                                 }
                             >
                                 <div className={styles.cookieLinkText}>
-                                    {i.text}
+                                    {link.text}
                                 </div>
                                 <div className={styles.cookieLinkIcon}>
                                     <Icon
-                                        path={i.path}
-                                        size={`min(5vw, 5vh)`}
+                                        path={link.path}
+                                        size={'min(5vw, 5vh)'}
                                     />
                                 </div>
                             </a>

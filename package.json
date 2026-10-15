@@ -13,7 +13,7 @@
         "deploy": "gh-pages -d dist"
     },
     "dependencies": {
-        "@mdi/js": "^7.3.67",
+        "@mdi/js": "^7.4.47",
         "@mdi/react": "^1.6.1",
         "dayjs": "^1.11.10",
         "react": "^18.2.0",

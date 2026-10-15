@@ -40,9 +40,23 @@ const about = [
     song(
         'B.A.Sc. in Honours Computer Science (Co-op)',
         'McMaster University',
-        'Sep 2021 - Present',
-        '5th year student with 11.7/12 CGPA',
+        'Sep 2021 - Jun 2026',
+        'Graduated summa cum laude with 3.97/4 cGPA',
         getDay('9/1/2021')
+    ),
+    song(
+        'Assistant Coach',
+        'McMaster University Rowing Club',
+        'Sep 2026 - Present',
+        'Coaching novice rowers',
+        getDay('9/1/2026')
+    ),
+    song(
+        'Volunteer Research Assistant',
+        'McMaster University',
+        'Apr 2026 - Present',
+        'Researching the use of AI in organ-on-a-chip devices',
+        getDay('5/1/2026')
     ),
     song(
         'Teaching Assistant',
@@ -62,7 +76,7 @@ const about = [
         'Varsity Rower',
         'Leander Boat Club (Westdale and McMaster)',
         'Nov 2017 - Present',
-        "Open Mens' 4+ and 2x",
+        "Open Mens' 8+, 4+, 2-, 2x, and 1x",
         getDay('11/1/2017')
     ),
     song(
@@ -71,17 +85,17 @@ const about = [
         'Jun 2017 - Present',
         '',
         getDay('7/18/2017')
-    ),
-    song(
-        'Support Main',
-        'Lost Ark',
-        'Feb 2022 - Present',
-        'Pump deeps!',
-        getDay('2/11/2022')
     )
 ]
 
 const skills = [
+    song(
+        'ML and AI',
+        'fast.ai, Hackathons, McMaster',
+        'Sep 2021 - Present',
+        'PyTorch, TensorFlow, Huggingface, fast.ai, OpenCV',
+        getDay('9/1/2021')
+    ),
     song(
         'Front-end Development',
         'The Odin Project, McMaster, and Co-op',
@@ -120,6 +134,14 @@ const skills = [
 ]
 
 const projects = [
+    song(
+        'Kollec',
+        'Capstone Project',
+        'Sep 2025 - Apr 2026',
+        'Help Pokemon TCG players manage their collections and facilitate trading',
+        getDay('9/1/2025'),
+        'https://github.com/collectiblescapstone/Kollec-App'
+    ),
     song(
         'EcoDex',
         'GDSC McMasterU Solution Challenge Hackathon 2024',
