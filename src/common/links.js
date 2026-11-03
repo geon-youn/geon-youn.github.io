@@ -1,4 +1,4 @@
-import { mdiChevronRight, mdiChevronLeft, mdiScriptText } from '@mdi/js'
+import { mdiChevronRight, mdiChevronLeft, mdiLinkedin } from '@mdi/js'
 
 // GitHub SVG Path
 const gitHub =
@@ -19,9 +19,9 @@ const linkItem = (href, text, path, newTab = false) => {
 const links = [
     linkItem('/#/play', 'Play', mdiChevronRight),
     linkItem(
-        'https://docs.google.com/document/d/1oj3gwQFQCw2CRM2pgIgZyZ4mBGCKxn1wisiEh8ku7NI/edit?usp=sharing',
-        'Resume',
-        mdiScriptText,
+        'https://www.linkedin.com/in/geon-youn/',
+        'LinkedIn',
+        mdiLinkedin,
         true
     ),
     linkItem('https://github.com/geon-youn', 'GitHub', gitHub, true),
